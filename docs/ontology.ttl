@@ -1,0 +1,2548 @@
+@prefix : <https://w3id.org/promess/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/promess/ontology#> .
+
+<https://w3id.org/promess/ontology> rdf:type owl:Ontology ;
+                                     owl:versionIRI <https://w3id.org/promess/ontology/0.1-draft> ;
+                                     <http://purl.org/dc/terms/created> "2026-04-06"^^xsd:date ;
+                                     <http://purl.org/dc/terms/creator> "Nushrat Jahan" ,
+                                                                        "Lylia Abrouk" ,
+                                                                        "Sandra Bringay" ,
+                                                                        "Zubeyir Salis" ;
+                                     <http://purl.org/dc/terms/description> "Draft version of the PROMESS ontology prepared for conceptual modeling, review, documentation, and further refinement."@en ,
+                                                                            "Version préliminaire de l’ontologie PROMESS préparée pour la modélisation conceptuelle, la revue, la documentation et l’affinement ultérieur."@fr ;
+                                     <http://purl.org/dc/terms/language> "en" ,
+                                                                         "fr" ;
+                                     <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                     <http://purl.org/dc/terms/modified> "2026-04-06"^^xsd:date ;
+                                     <http://purl.org/dc/terms/publisher> "Université de Montpellier, LIRMM; INSERM, PhyMedExp"@fr ;
+                                     <http://purl.org/dc/terms/title> "Ontologie PROMESS"@fr ,
+                                                                      "PROMESS Ontology"@en ;
+                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "promess" ;
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/promess/ontology#" ;
+                                     rdfs:label "Ontologie PROMESS"@fr ,
+                                                "PROMESS Ontology"@en ;
+                                     owl:versionInfo "Draft v0.1"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/promess/ontology#aAgentExpositionAir
+:aAgentExpositionAir rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ExpositionAir ;
+                     rdfs:range :AgentExposition ;
+                     rdfs:comment "Exposure agent for air exposure. Suggested cardinality: ExpositionAir -> AgentExposition = 0..*."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "aAgentExpositionAir"@fr .
+
+
+###  https://w3id.org/promess/ontology#aAgentExpositionChimique
+:aAgentExpositionChimique rdf:type owl:ObjectProperty ;
+                          rdfs:domain :ExpositionChimique ;
+                          rdfs:range :AgentExposition ;
+                          rdfs:comment "Exposure agent for chemical exposure. Suggested cardinality: ExpositionChimique -> AgentExposition = 0..*."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                          rdfs:label "aAgentExpositionChimique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aAgentExpositionPollution
+:aAgentExpositionPollution rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :agentPollutionDe ;
+                           rdfs:domain :ExpositionPollution ;
+                           rdfs:range :AgentExposition ;
+                           rdfs:comment "Exposure agent for pollution exposure. Suggested cardinality: ExpositionPollution -> AgentExposition = 0..*."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "aAgentExpositionPollution"@fr .
+
+
+###  https://w3id.org/promess/ontology#aAgentExpositionProfessionnelle
+:aAgentExpositionProfessionnelle rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf :agentProfessionnelDe ;
+                                 rdfs:domain :ExpositionProfessionnelle ;
+                                 rdfs:range :AgentExposition ;
+                                 rdfs:comment "Exposure agent for occupational exposure. Suggested cardinality: ExpositionProfessionnelle -> AgentExposition = 0..*."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                                 rdfs:label "aAgentExpositionProfessionnelle"@fr .
+
+
+###  https://w3id.org/promess/ontology#aComplementAlimentaire
+:aComplementAlimentaire rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ExpositionAlimentaire ;
+                        rdfs:range :ComplementAlimentaire ;
+                        rdfs:comment "Dietary supplement descriptor. Suggested cardinality: ExpositionAlimentaire -> ComplementAlimentaire = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "aComplementAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#aCondition
+:aCondition rdf:type owl:ObjectProperty ;
+            owl:inverseOf :conditionChezParticipant ;
+            rdfs:domain :Participant ;
+            rdfs:range :ConditionMedicale ;
+            rdfs:comment "Participant condition. Suggested cardinality: Participant -> ConditionMedicale = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "aCondition"@fr .
+
+
+###  https://w3id.org/promess/ontology#aConsommationEau
+:aConsommationEau rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :consommationEauDe ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :ExpositionAlimentaire ;
+                  rdfs:range :ConsommationEau ;
+                  rdfs:comment "Water consumption descriptor. Suggested cardinality: ExpositionAlimentaire -> ConsommationEau = 0..1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "aConsommationEau"@fr .
+
+
+###  https://w3id.org/promess/ontology#aEvenement
+:aEvenement rdf:type owl:ObjectProperty ;
+            rdfs:domain :Participant ;
+            rdfs:range :Evenement ;
+            rdfs:comment "Study-relevant event for participant. Suggested cardinality: Participant -> Evenement = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "aEvenement"@fr .
+
+
+###  https://w3id.org/promess/ontology#aExamenImagerie
+:aExamenImagerie rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :concerneParticipantExamen ;
+                 rdfs:domain :Participant ;
+                 rdfs:range :ExamenImagerie ;
+                 rdfs:comment "Participant imaging exam. Suggested cardinality: Participant -> ExamenImagerie = 0..*."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "aExamenImagerie"@fr .
+
+
+###  https://w3id.org/promess/ontology#aFacteurDeRisque
+:aFacteurDeRisque rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Participant ;
+                  rdfs:range :FacteurDeRisque ;
+                  rdfs:comment "General participant-risk-factor relation. Suggested cardinality: Participant -> FacteurDeRisque = 0..*."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "aFacteurDeRisque"@fr .
+
+
+###  https://w3id.org/promess/ontology#aFacteurExpositionnel
+:aFacteurExpositionnel rdf:type owl:ObjectProperty ;
+                       rdfs:domain :ConditionMedicale ;
+                       rdfs:range :Exposition ;
+                       rdfs:comment "Inverse exposure-risk relation. Suggested cardinality: ConditionMedicale -> Exposition = 0..*."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "aFacteurExpositionnel"@fr .
+
+
+###  https://w3id.org/promess/ontology#aFacteurPsychologique
+:aFacteurPsychologique rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :facteurPsychologiqueChezParticipant ;
+                       rdfs:domain :Participant ;
+                       rdfs:range :FacteurPsychologique ;
+                       rdfs:comment "Participant psychological factor. Suggested cardinality: Participant -> FacteurPsychologique = 0..*."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "aFacteurPsychologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aFrequenceConsommation
+:aFrequenceConsommation rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :frequenceDe ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :ExpositionAlimentaire ;
+                        rdfs:range :FrequenceConsommation ;
+                        rdfs:comment "Consumption frequency descriptor. Suggested cardinality: ExpositionAlimentaire -> FrequenceConsommation = 0..1."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "aFrequenceConsommation"@fr .
+
+
+###  https://w3id.org/promess/ontology#aHabitudeAlimentaire
+:aHabitudeAlimentaire rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :habitudeDe ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :ExpositionAlimentaire ;
+                      rdfs:range :HabitudeAlimentaire ;
+                      rdfs:comment "Dietary habit descriptor. Suggested cardinality: ExpositionAlimentaire -> HabitudeAlimentaire = 0..1."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "aHabitudeAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#aMesure
+:aMesure rdf:type owl:ObjectProperty ;
+         owl:inverseOf :concerneParticipantMesure ;
+         rdfs:domain :Participant ;
+         rdfs:range :Mesure ;
+         rdfs:comment "Participant has measurements. Suggested cardinality: Participant -> Mesure = 0..*."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "aMesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#aModeCuisson
+:aModeCuisson rdf:type owl:ObjectProperty ;
+              owl:inverseOf :modeCuissonDe ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :ExpositionAlimentaire ;
+              rdfs:range :ModeCuisson ;
+              rdfs:comment "Cooking mode descriptor. Suggested cardinality: ExpositionAlimentaire -> ModeCuisson = 0..1."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "aModeCuisson"@fr .
+
+
+###  https://w3id.org/promess/ontology#aNiveauTransformation
+:aNiveauTransformation rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain :ExpositionAlimentaire ;
+                       rdfs:range :NiveauTransformation ;
+                       rdfs:comment "Degree of processing descriptor. Suggested cardinality: ExpositionAlimentaire -> NiveauTransformation = 0..1."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "aNiveauTransformation"@fr .
+
+
+###  https://w3id.org/promess/ontology#aOrigineAliments
+:aOrigineAliments rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :origineDe ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :ExpositionAlimentaire ;
+                  rdfs:range :OrigineAliments ;
+                  rdfs:comment "Food origin descriptor. Suggested cardinality: ExpositionAlimentaire -> OrigineAliments = 0..1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "aOrigineAliments"@fr .
+
+
+###  https://w3id.org/promess/ontology#aPrelevementBiologique
+:aPrelevementBiologique rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :provientDeParticipant ;
+                        rdfs:domain :Participant ;
+                        rdfs:range :PrelevementBiologique ;
+                        rdfs:comment "Participant biological sample collection. Suggested cardinality: Participant -> PrelevementBiologique = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "aPrelevementBiologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aRegimeAlimentaire
+:aRegimeAlimentaire rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :regimeDe ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain :ExpositionAlimentaire ;
+                    rdfs:range :RegimeAlimentaire ;
+                    rdfs:comment "Dietary regimen descriptor. Suggested cardinality: ExpositionAlimentaire -> RegimeAlimentaire = 0..1."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "aRegimeAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#aResultatClinique
+:aResultatClinique rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :concerneParticipantResultat ;
+                   rdfs:domain :Participant ;
+                   rdfs:range :ResultatClinique ;
+                   rdfs:comment "General outcome link. Suggested cardinality: Participant -> ResultatClinique = 0..*."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "aResultatClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aSigneClinique
+:aSigneClinique rdf:type owl:ObjectProperty ;
+                owl:inverseOf :signeChezParticipant ;
+                rdfs:domain :Participant ;
+                rdfs:range :SigneClinique ;
+                rdfs:comment "Participant clinical sign. Suggested cardinality: Participant -> SigneClinique = 0..*."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "aSigneClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aSite
+:aSite rdf:type owl:ObjectProperty ;
+       owl:inverseOf :estSiteDe ;
+       rdfs:domain :Etude ;
+       rdfs:range :Lieu ;
+       rdfs:comment "Study site or center. Suggested cardinality: Etude -> Lieu = 1..*."@en ;
+       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+       rdfs:label "aSite"@fr .
+
+
+###  https://w3id.org/promess/ontology#aSubstanceTabagique
+:aSubstanceTabagique rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :substanceTabagiqueDe ;
+                     rdfs:domain :ExpositionTabagique ;
+                     rdfs:range :SubstanceTabagique ;
+                     rdfs:comment "Tobacco/cannabis descriptor. Suggested cardinality: ExpositionTabagique -> SubstanceTabagique = 0..*."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "aSubstanceTabagique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aTemporalite
+:aTemporalite rdf:type owl:ObjectProperty ;
+              owl:inverseOf :temporaliteDeVisite ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Visite ;
+              rdfs:range :TempsSuivi ;
+              rdfs:comment "Visit has one follow-up time point. Suggested cardinality: Visite -> TempsSuivi = 1."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "aTemporalite"@fr .
+
+
+###  https://w3id.org/promess/ontology#aTypeAliment
+:aTypeAliment rdf:type owl:ObjectProperty ;
+              owl:inverseOf :typeAlimentDe ;
+              rdfs:domain :ExpositionAlimentaire ;
+              rdfs:range :TypeAliment ;
+              rdfs:comment "Food type descriptor. Suggested cardinality: ExpositionAlimentaire -> TypeAliment = 0..*."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "aTypeAliment"@fr .
+
+
+###  https://w3id.org/promess/ontology#aTypeDeVisite
+:aTypeDeVisite rdf:type owl:ObjectProperty ;
+               owl:inverseOf :typeDeVisiteDe ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Visite ;
+               rdfs:range :TypeDeVisite ;
+               rdfs:comment "Each visit must have exactly one visit type. Suggested cardinality: Visite -> TypeDeVisite = 1."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "aTypeDeVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#aVisite
+:aVisite rdf:type owl:ObjectProperty ;
+         rdfs:domain :Participant ;
+         rdfs:range :Visite ;
+         rdfs:comment "Participant may have many visits. Suggested cardinality: Participant -> Visite = 0..*."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "aVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#accueilleVisite
+:accueilleVisite rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Lieu ;
+                 rdfs:range :Visite ;
+                 rdfs:comment "Location hosting visits. Suggested cardinality: Lieu -> Visite = 0..*."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "accueilleVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#agentAirDe
+:agentAirDe rdf:type owl:ObjectProperty ;
+            owl:inverseOf :aAgentExpositionAir ;
+            rdfs:domain :AgentExposition ;
+            rdfs:range :ExpositionAir ;
+            rdfs:comment "Inverse air agent relation. Suggested cardinality: AgentExposition -> ExpositionAir = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "agentAirDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#agentChimiqueDe
+:agentChimiqueDe rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :aAgentExpositionChimique ;
+                 rdfs:domain :AgentExposition ;
+                 rdfs:range :ExpositionChimique ;
+                 rdfs:comment "Inverse chemical agent relation. Suggested cardinality: AgentExposition -> ExpositionChimique = 0..*."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "agentChimiqueDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#agentPollutionDe
+:agentPollutionDe rdf:type owl:ObjectProperty ;
+                  rdfs:domain :AgentExposition ;
+                  rdfs:range :ExpositionPollution ;
+                  rdfs:comment "Inverse pollution agent relation. Suggested cardinality: AgentExposition -> ExpositionPollution = 0..*."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "agentPollutionDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#agentProfessionnelDe
+:agentProfessionnelDe rdf:type owl:ObjectProperty ;
+                      rdfs:domain :AgentExposition ;
+                      rdfs:range :ExpositionProfessionnelle ;
+                      rdfs:comment "Inverse occupational agent relation. Suggested cardinality: AgentExposition -> ExpositionProfessionnelle = 0..*."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "agentProfessionnelDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#analyseBiomarqueur
+:analyseBiomarqueur rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :biomarqueurAnalyseDans ;
+                    rdfs:domain :PrelevementBiologique ;
+                    rdfs:range :Biomarqueur ;
+                    rdfs:comment "Sample used for biomarker analysis. Suggested cardinality: PrelevementBiologique -> Biomarqueur = 0..*."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "analyseBiomarqueur"@fr .
+
+
+###  https://w3id.org/promess/ontology#appartientAEtude
+:appartientAEtude rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :comprendVisite ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Visite ;
+                  rdfs:range :Etude ;
+                  rdfs:comment "Each visit belongs to one study. Suggested cardinality: Visite -> Etude = 1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "appartientAEtude"@fr .
+
+
+###  https://w3id.org/promess/ontology#appartientAEtudeGroupe
+:appartientAEtudeGroupe rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :inclutGroupe ;
+                        rdfs:domain :GroupeDeParticipants ;
+                        rdfs:range :Etude ;
+                        rdfs:comment "Inverse of group inclusion in study. Suggested cardinality: GroupeDeParticipants -> Etude = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "appartientAEtudeGroupe"@fr .
+
+
+###  https://w3id.org/promess/ontology#appartientAuGroupe
+:appartientAuGroupe rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Participant ;
+                    rdfs:range :GroupeDeParticipants ;
+                    rdfs:comment "Participant group membership. Suggested cardinality: Participant -> GroupeDeParticipants = 0..1."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "appartientAuGroupe"@fr .
+
+
+###  https://w3id.org/promess/ontology#biomarqueurAnalyseDans
+:biomarqueurAnalyseDans rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Biomarqueur ;
+                        rdfs:range :PrelevementBiologique ;
+                        rdfs:comment "Inverse biomarker-analysis relation. Suggested cardinality: Biomarqueur -> PrelevementBiologique = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "biomarqueurAnalyseDans"@fr .
+
+
+###  https://w3id.org/promess/ontology#biomarqueurMesurePar
+:biomarqueurMesurePar rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :mesureBiomarqueur ;
+                      rdfs:domain :Biomarqueur ;
+                      rdfs:range :MesureBiologique ;
+                      rdfs:comment "Inverse biomarker-measurement relation. Suggested cardinality: Biomarqueur -> MesureBiologique = 0..*."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "biomarqueurMesurePar"@fr .
+
+
+###  https://w3id.org/promess/ontology#complementDe
+:complementDe rdf:type owl:ObjectProperty ;
+              owl:inverseOf :aComplementAlimentaire ;
+              rdfs:domain :ComplementAlimentaire ;
+              rdfs:range :ExpositionAlimentaire ;
+              rdfs:comment "Inverse supplement descriptor relation. Suggested cardinality: ComplementAlimentaire -> ExpositionAlimentaire = 0..*."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "complementDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#comprendEvenement
+:comprendEvenement rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Visite ;
+                   rdfs:range :Evenement ;
+                   rdfs:comment "Inverse of event during visit relation. Suggested cardinality: Visite -> Evenement = 0..*."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "comprendEvenement"@fr .
+
+
+###  https://w3id.org/promess/ontology#comprendExamenImagerie
+:comprendExamenImagerie rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :examenRealiseLorsDe ;
+                        rdfs:domain :Visite ;
+                        rdfs:range :ExamenImagerie ;
+                        rdfs:comment "Visit includes imaging exams. Suggested cardinality: Visite -> ExamenImagerie = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "comprendExamenImagerie"@fr .
+
+
+###  https://w3id.org/promess/ontology#comprendMesure
+:comprendMesure rdf:type owl:ObjectProperty ;
+                rdfs:domain :Visite ;
+                rdfs:range :Mesure ;
+                rdfs:comment "Visit includes measurements. Suggested cardinality: Visite -> Mesure = 0..*."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "comprendMesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#comprendPrelevement
+:comprendPrelevement rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :prelevementRealiseLorsDe ;
+                     rdfs:domain :Visite ;
+                     rdfs:range :PrelevementBiologique ;
+                     rdfs:comment "Visit includes biological samples. Suggested cardinality: Visite -> PrelevementBiologique = 0..*."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "comprendPrelevement"@fr .
+
+
+###  https://w3id.org/promess/ontology#comprendVisite
+:comprendVisite rdf:type owl:ObjectProperty ;
+                rdfs:domain :Etude ;
+                rdfs:range :Visite ;
+                rdfs:comment "Study contains visits. Suggested cardinality: Etude -> Visite = 0..*."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "comprendVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipant
+:concerneParticipant rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :aVisite ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :Visite ;
+                     rdfs:range :Participant ;
+                     rdfs:comment "Each visit concerns one participant in this conceptual model. Suggested cardinality: Visite -> Participant = 1."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "concerneParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipantEvenement
+:concerneParticipantEvenement rdf:type owl:ObjectProperty ;
+                              owl:inverseOf :aEvenement ;
+                              rdf:type owl:FunctionalProperty ;
+                              rdfs:domain :Evenement ;
+                              rdfs:range :Participant ;
+                              rdfs:comment "Each event concerns one participant in this conceptual model. Suggested cardinality: Evenement -> Participant = 1."@en ;
+                              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                              rdfs:label "concerneParticipantEvenement"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipantExamen
+:concerneParticipantExamen rdf:type owl:ObjectProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain :ExamenImagerie ;
+                           rdfs:range :Participant ;
+                           rdfs:comment "Each imaging exam concerns one participant in this conceptual model. Suggested cardinality: ExamenImagerie -> Participant = 1."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "concerneParticipantExamen"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipantExposition
+:concerneParticipantExposition rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain :Exposition ;
+                               rdfs:range :Participant ;
+                               rdfs:comment "Each exposure concerns one participant in this conceptual model. Suggested cardinality: Exposition -> Participant = 1."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                               rdfs:label "concerneParticipantExposition"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipantMesure
+:concerneParticipantMesure rdf:type owl:ObjectProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain :Mesure ;
+                           rdfs:range :Participant ;
+                           rdfs:comment "Each measurement concerns one participant in this conceptual model. Suggested cardinality: Mesure -> Participant = 1."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "concerneParticipantMesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#concerneParticipantResultat
+:concerneParticipantResultat rdf:type owl:ObjectProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain :ResultatClinique ;
+                             rdfs:range :Participant ;
+                             rdfs:comment "Each clinical result concerns one participant in this conceptual model. Suggested cardinality: ResultatClinique -> Participant = 1."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                             rdfs:label "concerneParticipantResultat"@fr .
+
+
+###  https://w3id.org/promess/ontology#conditionChezParticipant
+:conditionChezParticipant rdf:type owl:ObjectProperty ;
+                          rdfs:domain :ConditionMedicale ;
+                          rdfs:range :Participant ;
+                          rdfs:comment "Inverse participant condition relation. Suggested cardinality: ConditionMedicale -> Participant = 0..*."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                          rdfs:label "conditionChezParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#confirmeCondition
+:confirmeCondition rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :ResultatDeConfirmation ;
+                   rdfs:range :ConditionMedicale ;
+                   rdfs:comment "Confirmation result targets one condition. Suggested cardinality: ResultatDeConfirmation -> ConditionMedicale = 1."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "confirmeCondition"@fr .
+
+
+###  https://w3id.org/promess/ontology#consommationEauDe
+:consommationEauDe rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ConsommationEau ;
+                   rdfs:range :ExpositionAlimentaire ;
+                   rdfs:comment "Inverse water consumption descriptor relation. Suggested cardinality: ConsommationEau -> ExpositionAlimentaire = 0..*."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "consommationEauDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#contientParticipant
+:contientParticipant rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :appartientAuGroupe ;
+                     rdfs:domain :GroupeDeParticipants ;
+                     rdfs:range :Participant ;
+                     rdfs:comment "Inverse of participant group membership. Suggested cardinality: GroupeDeParticipants -> Participant = 0..*."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "contientParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#detecte
+:detecte rdf:type owl:ObjectProperty ;
+         owl:inverseOf :estDetectePar ;
+         rdfs:domain :ExamenImagerie ;
+         rdfs:range :SigneClinique ;
+         rdfs:comment "Imaging exam detects a clinical sign. Suggested cardinality: ExamenImagerie -> SigneClinique = 0..*."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "detecte"@fr .
+
+
+###  https://w3id.org/promess/ontology#detecteSigneCliniqueMesure
+:detecteSigneCliniqueMesure rdf:type owl:ObjectProperty ;
+                            rdfs:domain :MesureImagerie ;
+                            rdfs:range :SigneClinique ;
+                            rdfs:comment "Imaging-derived measurement detects a clinical sign. Suggested cardinality: MesureImagerie -> SigneClinique = 0..*."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                            rdfs:label "detecteSigneCliniqueMesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#estCibleDeProgression
+:estCibleDeProgression rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :progresseVersCondition ;
+                       rdfs:domain :ConditionMedicale ;
+                       rdfs:range :ResultatDEvolution ;
+                       rdfs:comment "Inverse evolution target relation. Suggested cardinality: ConditionMedicale -> ResultatDEvolution = 0..*."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "estCibleDeProgression"@fr .
+
+
+###  https://w3id.org/promess/ontology#estConfirmeePar
+:estConfirmeePar rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :confirmeCondition ;
+                 rdfs:domain :ConditionMedicale ;
+                 rdfs:range :ResultatDeConfirmation ;
+                 rdfs:comment "Inverse confirmation target relation. Suggested cardinality: ConditionMedicale -> ResultatDeConfirmation = 0..*."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "estConfirmeePar"@fr .
+
+
+###  https://w3id.org/promess/ontology#estDetectePar
+:estDetectePar rdf:type owl:ObjectProperty ;
+               rdfs:domain :SigneClinique ;
+               rdfs:range :ExamenImagerie ;
+               rdfs:comment "Inverse imaging-detection relation. Suggested cardinality: SigneClinique -> ExamenImagerie = 0..*."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "estDetectePar"@fr .
+
+
+###  https://w3id.org/promess/ontology#estEvaluePar
+:estEvaluePar rdf:type owl:ObjectProperty ;
+              rdfs:domain :FacteurPsychologique ;
+              rdfs:range :MesurePsychologique ;
+              rdfs:comment "Inverse psychological evaluation relation. Suggested cardinality: FacteurPsychologique -> MesurePsychologique = 0..*."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "estEvaluePar"@fr .
+
+
+###  https://w3id.org/promess/ontology#estExposeA
+:estExposeA rdf:type owl:ObjectProperty ;
+            owl:inverseOf :concerneParticipantExposition ;
+            rdfs:domain :Participant ;
+            rdfs:range :Exposition ;
+            rdfs:comment "Participant has exposures. Suggested cardinality: Participant -> Exposition = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "estExposeA"@fr .
+
+
+###  https://w3id.org/promess/ontology#estFacteurDeRisqueDe
+:estFacteurDeRisqueDe rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :aFacteurExpositionnel ;
+                      rdfs:domain :Exposition ;
+                      rdfs:range :ConditionMedicale ;
+                      rdfs:comment "Exposure is a risk factor for a condition. Suggested cardinality: Exposition -> ConditionMedicale = 0..*."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "estFacteurDeRisqueDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#estRealiseeLorsDe
+:estRealiseeLorsDe rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :comprendMesure ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :Mesure ;
+                   rdfs:range :Visite ;
+                   rdfs:comment "Measurement is performed during one visit. Suggested cardinality: Mesure -> Visite = 1."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "estRealiseeLorsDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#estRecuPar
+:estRecuPar rdf:type owl:ObjectProperty ;
+            rdfs:domain :Traitement ;
+            rdfs:range :Participant ;
+            rdfs:comment "Inverse of treatment relation. Suggested cardinality: Traitement -> Participant = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "estRecuPar"@fr .
+
+
+###  https://w3id.org/promess/ontology#estSiteDe
+:estSiteDe rdf:type owl:ObjectProperty ;
+           rdfs:domain :Lieu ;
+           rdfs:range :Etude ;
+           rdfs:comment "Inverse of study site relation. Suggested cardinality: Lieu -> Etude = 0..*."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "estSiteDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#estSuiviDans
+:estSuiviDans rdf:type owl:ObjectProperty ;
+              owl:inverseOf :inclutParticipant ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Participant ;
+              rdfs:range :Etude ;
+              rdfs:comment "Each participant belongs to one study. Suggested cardinality: Participant -> Etude = 1."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "estSuiviDans"@fr .
+
+
+###  https://w3id.org/promess/ontology#evalueFacteurPsychologique
+:evalueFacteurPsychologique rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :estEvaluePar ;
+                            rdfs:domain :MesurePsychologique ;
+                            rdfs:range :FacteurPsychologique ;
+                            rdfs:comment "Psychological measurement evaluates psychological factor. Suggested cardinality: MesurePsychologique -> FacteurPsychologique = 0..*."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                            rdfs:label "evalueFacteurPsychologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#examenRealiseLorsDe
+:examenRealiseLorsDe rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :ExamenImagerie ;
+                     rdfs:range :Visite ;
+                     rdfs:comment "Imaging exam linked to one visit. Suggested cardinality: ExamenImagerie -> Visite = 1."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "examenRealiseLorsDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#facteurConcerneParticipant
+:facteurConcerneParticipant rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :aFacteurDeRisque ;
+                            rdfs:domain :FacteurDeRisque ;
+                            rdfs:range :Participant ;
+                            rdfs:comment "Inverse of participant-risk-factor relation. Suggested cardinality: FacteurDeRisque -> Participant = 0..*."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                            rdfs:label "facteurConcerneParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#facteurPsychologiqueChezParticipant
+:facteurPsychologiqueChezParticipant rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :FacteurPsychologique ;
+                                     rdfs:range :Participant ;
+                                     rdfs:comment "Inverse participant-psychological factor relation. Suggested cardinality: FacteurPsychologique -> Participant = 0..*."@en ;
+                                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                                     rdfs:label "facteurPsychologiqueChezParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#frequenceDe
+:frequenceDe rdf:type owl:ObjectProperty ;
+             rdfs:domain :FrequenceConsommation ;
+             rdfs:range :ExpositionAlimentaire ;
+             rdfs:comment "Inverse frequency descriptor relation. Suggested cardinality: FrequenceConsommation -> ExpositionAlimentaire = 0..*."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "frequenceDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#habitudeDe
+:habitudeDe rdf:type owl:ObjectProperty ;
+            rdfs:domain :HabitudeAlimentaire ;
+            rdfs:range :ExpositionAlimentaire ;
+            rdfs:comment "Inverse dietary habit descriptor relation. Suggested cardinality: HabitudeAlimentaire -> ExpositionAlimentaire = 0..*."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "habitudeDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#inclutGroupe
+:inclutGroupe rdf:type owl:ObjectProperty ;
+              rdfs:domain :Etude ;
+              rdfs:range :GroupeDeParticipants ;
+              rdfs:comment "Study includes participant groups. Suggested cardinality: Etude -> GroupeDeParticipants = 0..*."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "inclutGroupe"@fr .
+
+
+###  https://w3id.org/promess/ontology#inclutParticipant
+:inclutParticipant rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Etude ;
+                   rdfs:range :Participant ;
+                   rdfs:comment "Study includes participants. Suggested cardinality: Etude -> Participant = 0..*."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "inclutParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#interagitAvec
+:interagitAvec rdf:type owl:ObjectProperty ;
+               owl:inverseOf :interagitAvec ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:domain :FacteurDeRisque ;
+               rdfs:range :FacteurDeRisque ;
+               rdfs:comment "Interaction between risk factors. Suggested cardinality: FacteurDeRisque -> FacteurDeRisque = 0..*."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "interagitAvec"@fr .
+
+
+###  https://w3id.org/promess/ontology#mesureBiomarqueur
+:mesureBiomarqueur rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MesureBiologique ;
+                   rdfs:range :Biomarqueur ;
+                   rdfs:comment "Biological measurement targets biomarker. Suggested cardinality: MesureBiologique -> Biomarqueur = 0..*."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "mesureBiomarqueur"@fr .
+
+
+###  https://w3id.org/promess/ontology#modeCuissonDe
+:modeCuissonDe rdf:type owl:ObjectProperty ;
+               rdfs:domain :ModeCuisson ;
+               rdfs:range :ExpositionAlimentaire ;
+               rdfs:comment "Inverse cooking mode descriptor relation. Suggested cardinality: ModeCuisson -> ExpositionAlimentaire = 0..*."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "modeCuissonDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#niveauTransformationDe
+:niveauTransformationDe rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :aNiveauTransformation ;
+                        rdfs:domain :NiveauTransformation ;
+                        rdfs:range :ExpositionAlimentaire ;
+                        rdfs:comment "Inverse processing descriptor relation. Suggested cardinality: NiveauTransformation -> ExpositionAlimentaire = 0..*."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "niveauTransformationDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#origineDe
+:origineDe rdf:type owl:ObjectProperty ;
+           rdfs:domain :OrigineAliments ;
+           rdfs:range :ExpositionAlimentaire ;
+           rdfs:comment "Inverse food origin descriptor relation. Suggested cardinality: OrigineAliments -> ExpositionAlimentaire = 0..*."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "origineDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#prelevementRealiseLorsDe
+:prelevementRealiseLorsDe rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain :PrelevementBiologique ;
+                          rdfs:range :Visite ;
+                          rdfs:comment "Biological sample linked to one visit. Suggested cardinality: PrelevementBiologique -> Visite = 1."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                          rdfs:label "prelevementRealiseLorsDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#presenteSymptome
+:presenteSymptome rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :symptomeChezParticipant ;
+                  rdfs:domain :Participant ;
+                  rdfs:range :Symptome ;
+                  rdfs:comment "Participant symptoms. Suggested cardinality: Participant -> Symptome = 0..*."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "presenteSymptome"@fr .
+
+
+###  https://w3id.org/promess/ontology#progresseVersCondition
+:progresseVersCondition rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :ResultatDEvolution ;
+                        rdfs:range :ConditionMedicale ;
+                        rdfs:comment "Evolution result targets one condition. Suggested cardinality: ResultatDEvolution -> ConditionMedicale = 1."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "progresseVersCondition"@fr .
+
+
+###  https://w3id.org/promess/ontology#provientDeParticipant
+:provientDeParticipant rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain :PrelevementBiologique ;
+                       rdfs:range :Participant ;
+                       rdfs:comment "Each biological sample comes from one participant. Suggested cardinality: PrelevementBiologique -> Participant = 1."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "provientDeParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#recoitTraitement
+:recoitTraitement rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :estRecuPar ;
+                  rdfs:domain :Participant ;
+                  rdfs:range :Traitement ;
+                  rdfs:comment "Treatment exposure/intervention. Suggested cardinality: Participant -> Traitement = 0..*."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "recoitTraitement"@fr .
+
+
+###  https://w3id.org/promess/ontology#regimeDe
+:regimeDe rdf:type owl:ObjectProperty ;
+          rdfs:domain :RegimeAlimentaire ;
+          rdfs:range :ExpositionAlimentaire ;
+          rdfs:comment "Inverse dietary regimen descriptor relation. Suggested cardinality: RegimeAlimentaire -> ExpositionAlimentaire = 0..*."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "regimeDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#seDerouleDans
+:seDerouleDans rdf:type owl:ObjectProperty ;
+               owl:inverseOf :accueilleVisite ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Visite ;
+               rdfs:range :Lieu ;
+               rdfs:comment "Visit occurs at one place. Suggested cardinality: Visite -> Lieu = 1."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "seDerouleDans"@fr .
+
+
+###  https://w3id.org/promess/ontology#signeChezParticipant
+:signeChezParticipant rdf:type owl:ObjectProperty ;
+                      rdfs:domain :SigneClinique ;
+                      rdfs:range :Participant ;
+                      rdfs:comment "Inverse sign relation. Suggested cardinality: SigneClinique -> Participant = 0..*."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "signeChezParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#signeDetecteParMesure
+:signeDetecteParMesure rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :detecteSigneCliniqueMesure ;
+                       rdfs:domain :SigneClinique ;
+                       rdfs:range :MesureImagerie ;
+                       rdfs:comment "Inverse imaging-measure sign relation. Suggested cardinality: SigneClinique -> MesureImagerie = 0..*."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "signeDetecteParMesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#substanceTabagiqueDe
+:substanceTabagiqueDe rdf:type owl:ObjectProperty ;
+                      rdfs:domain :SubstanceTabagique ;
+                      rdfs:range :ExpositionTabagique ;
+                      rdfs:comment "Inverse tobacco-substance relation. Suggested cardinality: SubstanceTabagique -> ExpositionTabagique = 0..*."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "substanceTabagiqueDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#survientLorsDe
+:survientLorsDe rdf:type owl:ObjectProperty ;
+                owl:inverseOf :comprendEvenement ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Evenement ;
+                rdfs:range :Visite ;
+                rdfs:comment "Event may occur during a visit. Suggested cardinality: Evenement -> Visite = 0..1."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "survientLorsDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#symptomeChezParticipant
+:symptomeChezParticipant rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Symptome ;
+                         rdfs:range :Participant ;
+                         rdfs:comment "Inverse symptom relation. Suggested cardinality: Symptome -> Participant = 0..*."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                         rdfs:label "symptomeChezParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#temporaliteDeVisite
+:temporaliteDeVisite rdf:type owl:ObjectProperty ;
+                     rdfs:domain :TempsSuivi ;
+                     rdfs:range :Visite ;
+                     rdfs:comment "Inverse of visit temporality. Suggested cardinality: TempsSuivi -> Visite = 0..*."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "temporaliteDeVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#typeAlimentDe
+:typeAlimentDe rdf:type owl:ObjectProperty ;
+               rdfs:domain :TypeAliment ;
+               rdfs:range :ExpositionAlimentaire ;
+               rdfs:comment "Inverse food type descriptor relation. Suggested cardinality: TypeAliment -> ExpositionAlimentaire = 0..*."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "typeAlimentDe"@fr .
+
+
+###  https://w3id.org/promess/ontology#typeDeVisiteDe
+:typeDeVisiteDe rdf:type owl:ObjectProperty ;
+                rdfs:domain :TypeDeVisite ;
+                rdfs:range :Visite ;
+                rdfs:comment "Inverse of visit typing. Suggested cardinality: TypeDeVisite -> Visite = 0..*."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "typeDeVisiteDe"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/promess/ontology#aScore
+:aScore rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :MesurePsychologique ;
+        rdfs:range xsd:decimal ;
+        rdfs:comment "Psychological score value. Suggested cardinality: MesurePsychologique -> xsd:decimal = 0..1."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "aScore"@fr .
+
+
+###  https://w3id.org/promess/ontology#aUnite
+:aUnite rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Mesure ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Measurement unit. Suggested cardinality: Mesure -> xsd:string = 0..1."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "aUnite"@fr .
+
+
+###  https://w3id.org/promess/ontology#aUniteBiomarqueur
+:aUniteBiomarqueur rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :MesureBiologique ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Biomarker unit. Suggested cardinality: MesureBiologique -> xsd:string = 0..1."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "aUniteBiomarqueur"@fr .
+
+
+###  https://w3id.org/promess/ontology#aValeurBiomarqueur
+:aValeurBiomarqueur rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :MesureBiologique ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "Biomarker result value. Suggested cardinality: MesureBiologique -> xsd:decimal = 0..1."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "aValeurBiomarqueur"@fr .
+
+
+###  https://w3id.org/promess/ontology#aValeurNumerique
+:aValeurNumerique rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Mesure ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "Generic scalar measurement value. Suggested cardinality: Mesure -> xsd:decimal = 0..1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "aValeurNumerique"@fr .
+
+
+###  https://w3id.org/promess/ontology#aValeurTexte
+:aValeurTexte rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Mesure ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Text result if needed. Suggested cardinality: Mesure -> xsd:string = 0..1."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "aValeurTexte"@fr .
+
+
+###  https://w3id.org/promess/ontology#bmi
+:bmi rdf:type owl:DatatypeProperty ,
+              owl:FunctionalProperty ;
+     rdfs:domain :ParametreAnthropometrique ;
+     rdfs:range xsd:decimal ;
+     rdfs:comment "BMI value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -> xsd:decimal = 0..1."@en ;
+     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+     rdfs:label "bmi"@fr .
+
+
+###  https://w3id.org/promess/ontology#codeTypeDeVisite
+:codeTypeDeVisite rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :TypeDeVisite ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Code for visit type, e.g. J0, S26, S52. Suggested cardinality: TypeDeVisite -> xsd:string = 1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "codeTypeDeVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#commentaireClinique
+:commentaireClinique rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :ResultatClinique ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Optional clinical comment. Suggested cardinality: ResultatClinique -> xsd:string = 0..1."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "commentaireClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#dateEvenement
+:dateEvenement rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Evenement ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Event date. Suggested cardinality: Evenement -> xsd:date = 0..1."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "dateEvenement"@fr .
+
+
+###  https://w3id.org/promess/ontology#dateResultat
+:dateResultat rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :ResultatClinique ;
+              rdfs:range xsd:date ;
+              rdfs:comment "Outcome/result date. Suggested cardinality: ResultatClinique -> xsd:date = 0..1."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "dateResultat"@fr .
+
+
+###  https://w3id.org/promess/ontology#dateVisite
+:dateVisite rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Visite ;
+            rdfs:range xsd:date ;
+            rdfs:comment "Actual visit date. Suggested cardinality: Visite -> xsd:date = 0..1."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "dateVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#identifiantEtude
+:identifiantEtude rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Etude ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Study identifier. Suggested cardinality: Etude -> xsd:string = 1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "identifiantEtude"@fr .
+
+
+###  https://w3id.org/promess/ontology#identifiantParticipant
+:identifiantParticipant rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :Participant ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Unique participant identifier. Suggested cardinality: Participant -> xsd:string = 1."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "identifiantParticipant"@fr .
+
+
+###  https://w3id.org/promess/ontology#intensiteSymptome
+:intensiteSymptome rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :Symptome ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Optional symptom intensity value. Suggested cardinality: Symptome -> xsd:decimal = 0..1."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "intensiteSymptome"@fr .
+
+
+###  https://w3id.org/promess/ontology#latitude
+:latitude rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Lieu ;
+          rdfs:range xsd:decimal ;
+          rdfs:comment "Latitude of place or site. Suggested cardinality: Lieu -> xsd:decimal = 0..1."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "latitude"@fr .
+
+
+###  https://w3id.org/promess/ontology#longitude
+:longitude rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Lieu ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "Longitude of place or site. Suggested cardinality: Lieu -> xsd:decimal = 0..1."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "longitude"@fr .
+
+
+###  https://w3id.org/promess/ontology#nomLieu
+:nomLieu rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Lieu ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Human-readable place or site name. Suggested cardinality: Lieu -> xsd:string = 0..1."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "nomLieu"@fr .
+
+
+###  https://w3id.org/promess/ontology#ordreTempsSuivi
+:ordreTempsSuivi rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :TempsSuivi ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "Numeric order for longitudinal follow-up. Suggested cardinality: TempsSuivi -> xsd:integer = 1."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "ordreTempsSuivi"@fr .
+
+
+###  https://w3id.org/promess/ontology#poids
+:poids rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :ParametreAnthropometrique ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment "Weight value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -> xsd:decimal = 0..1."@en ;
+       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+       rdfs:label "poids"@fr .
+
+
+###  https://w3id.org/promess/ontology#presenceSymptome
+:presenceSymptome rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Symptome ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Optional symptom presence flag. Suggested cardinality: Symptome -> xsd:boolean = 0..1."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "presenceSymptome"@fr .
+
+
+###  https://w3id.org/promess/ontology#taille
+:taille rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :ParametreAnthropometrique ;
+        rdfs:range xsd:decimal ;
+        rdfs:comment "Body size/height value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -> xsd:decimal = 0..1."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "taille"@fr .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/promess/ontology#ACPA
+:ACPA rdf:type owl:Class ;
+      rdfs:subClassOf :BiomarqueurImmunologique ;
+      rdfs:comment "Anti-citrullinated protein antibodies biomarker type."@en ;
+      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+      rdfs:label "ACPA"@fr .
+
+
+###  https://w3id.org/promess/ontology#ADN
+:ADN rdf:type owl:Class ;
+     rdfs:subClassOf :Sang ;
+     rdfs:comment "DNA derived from blood sample."@en ;
+     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+     rdfs:label "ADN"@fr .
+
+
+###  https://w3id.org/promess/ontology#ARN
+:ARN rdf:type owl:Class ;
+     rdfs:subClassOf :Sang ;
+     rdfs:comment "RNA derived from blood sample."@en ;
+     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+     rdfs:label "ARN"@fr .
+
+
+###  https://w3id.org/promess/ontology#AgentExposition
+:AgentExposition rdf:type owl:Class ;
+                 rdfs:comment "Controlled family for exposure agents."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "AgentExposition"@fr .
+
+
+###  https://w3id.org/promess/ontology#Alexithymie
+:Alexithymie rdf:type owl:Class ;
+             rdfs:subClassOf :FacteurPsychologique ;
+             rdfs:comment "Alexithymia-related psychological factor."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Alexithymie"@fr .
+
+
+###  https://w3id.org/promess/ontology#AntecedentMedical
+:AntecedentMedical rdf:type owl:Class ;
+                   rdfs:subClassOf :FacteurClinique ;
+                   rdfs:comment "Medical history concept kept distinct from comorbidity."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "AntécédentMédical"@fr .
+
+
+###  https://w3id.org/promess/ontology#Anxiete
+:Anxiete rdf:type owl:Class ;
+         rdfs:subClassOf :FacteurPsychologique ;
+         rdfs:comment "Anxiety-related psychological factor."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Anxiété"@fr .
+
+
+###  https://w3id.org/promess/ontology#ArthralgiesCliniquementSuspectes
+:ArthralgiesCliniquementSuspectes rdf:type owl:Class ;
+                                  rdfs:subClassOf :ConditionMedicale ;
+                                  rdfs:comment "Clinically suspect arthralgia."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                                  rdfs:label "ArthralgiesCliniquementSuspectes"@fr .
+
+
+###  https://w3id.org/promess/ontology#ArthriteClinique
+:ArthriteClinique rdf:type owl:Class ;
+                  rdfs:subClassOf :ConditionMedicale ;
+                  rdfs:comment "Clinically manifest arthritis."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "ArthriteClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#Biomarqueur
+:Biomarqueur rdf:type owl:Class ;
+             rdfs:subClassOf :FacteurBiologique ;
+             rdfs:comment "Biological marker evaluated by measurement or analysis."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Biomarqueur"@fr .
+
+
+###  https://w3id.org/promess/ontology#BiomarqueurImmunologique
+:BiomarqueurImmunologique rdf:type owl:Class ;
+                          rdfs:subClassOf :Biomarqueur ;
+                          rdfs:comment "Immunological biomarker family."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                          rdfs:label "BiomarqueurImmunologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#BiomarqueurMicrobiote
+:BiomarqueurMicrobiote rdf:type owl:Class ;
+                       rdfs:subClassOf :Biomarqueur ;
+                       rdfs:comment "Microbiota-related biomarker type."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "BiomarqueurMicrobiote"@fr .
+
+
+###  https://w3id.org/promess/ontology#Boissons
+:Boissons rdf:type owl:Class ;
+          rdfs:subClassOf :TypeAliment ;
+          owl:disjointWith :Cereales ,
+                           :Fruits ,
+                           :Legumes ,
+                           :Poisson ,
+                           :ProduitsLaitiers ,
+                           :Snacks ,
+                           :Sucreries ,
+                           :Viande ;
+          rdfs:comment "Beverages."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "Boissons"@fr .
+
+
+###  https://w3id.org/promess/ontology#CRP
+:CRP rdf:type owl:Class ;
+     rdfs:subClassOf :BiomarqueurImmunologique ;
+     rdfs:comment "C-reactive protein biomarker type."@en ;
+     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+     rdfs:label "CRP"@fr .
+
+
+###  https://w3id.org/promess/ontology#Cannabis
+:Cannabis rdf:type owl:Class ;
+          rdfs:subClassOf :SubstanceTabagique ;
+          rdfs:comment "Cannabis substance."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "Cannabis"@fr .
+
+
+###  https://w3id.org/promess/ontology#Cellule
+:Cellule rdf:type owl:Class ;
+         rdfs:subClassOf :Sang ;
+         rdfs:comment "Cell fraction derived from blood."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Cellule"@fr .
+
+
+###  https://w3id.org/promess/ontology#Cereales
+:Cereales rdf:type owl:Class ;
+          rdfs:subClassOf :TypeAliment ;
+          owl:disjointWith :Fruits ,
+                           :Legumes ,
+                           :Poisson ,
+                           :ProduitsLaitiers ,
+                           :Snacks ,
+                           :Sucreries ,
+                           :Viande ;
+          rdfs:comment "Cereals/grains."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "Céréales"@fr .
+
+
+###  https://w3id.org/promess/ontology#Cheveux
+:Cheveux rdf:type owl:Class ;
+         rdfs:subClassOf :PrelevementBiologique ;
+         owl:disjointWith :Ongles ,
+                          :Salive ,
+                          :Sang ,
+                          :Selles ,
+                          :Urines ;
+         rdfs:comment "Hair sample."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Cheveux"@fr .
+
+
+###  https://w3id.org/promess/ontology#Comorbidite
+:Comorbidite rdf:type owl:Class ;
+             rdfs:subClassOf :ConditionMedicale ;
+             rdfs:comment "Coexisting medical condition; kept distinct from medical history."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Comorbidité"@fr .
+
+
+###  https://w3id.org/promess/ontology#ComplementAlimentaire
+:ComplementAlimentaire rdf:type owl:Class ;
+                       rdfs:comment "Dietary supplement descriptor."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "ComplémentAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#ConditionMedicale
+:ConditionMedicale rdf:type owl:Class ;
+                   rdfs:comment "Disease, syndrome, comorbidity, or medically relevant condition."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "ConditionMédicale"@fr .
+
+
+###  https://w3id.org/promess/ontology#ConfirmationEchographique
+:ConfirmationEchographique rdf:type owl:Class ;
+                           rdfs:subClassOf :ResultatDeConfirmation ;
+                           rdfs:comment "Ultrasound-based confirmation result."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "ConfirmationÉchographique"@fr .
+
+
+###  https://w3id.org/promess/ontology#ConsommationEau
+:ConsommationEau rdf:type owl:Class ;
+                 rdfs:comment "Water consumption descriptor."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "ConsommationEau"@fr .
+
+
+###  https://w3id.org/promess/ontology#Coping
+:Coping rdf:type owl:Class ;
+        rdfs:subClassOf :FacteurPsychologique ;
+        rdfs:comment "Coping style or mechanism."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Coping"@fr .
+
+
+###  https://w3id.org/promess/ontology#Depression
+:Depression rdf:type owl:Class ;
+            rdfs:subClassOf :FacteurPsychologique ;
+            rdfs:comment "Depression-related psychological factor."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "Dépression"@fr .
+
+
+###  https://w3id.org/promess/ontology#Dissociation
+:Dissociation rdf:type owl:Class ;
+              rdfs:subClassOf :FacteurPsychologique ;
+              rdfs:comment "Dissociation-related psychological factor."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "Dissociation"@fr .
+
+
+###  https://w3id.org/promess/ontology#DosagePolluants
+:DosagePolluants rdf:type owl:Class ;
+                 rdfs:subClassOf :Biomarqueur ;
+                 rdfs:comment "Pollutant dosage biomarker/result type."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "DosagePolluants"@fr .
+
+
+###  https://w3id.org/promess/ontology#Echographie
+:Echographie rdf:type owl:Class ;
+             rdfs:subClassOf :ExamenImagerie ;
+             owl:disjointWith :IRM ;
+             rdfs:comment "Ultrasound examination."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Échographie"@fr .
+
+
+###  https://w3id.org/promess/ontology#Echographiste
+:Echographiste rdf:type owl:Class ;
+               rdfs:subClassOf :Medecin ;
+               rdfs:comment "Ultrasound specialist; modeled as a kind of physician."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "Échographiste"@fr .
+
+
+###  https://w3id.org/promess/ontology#Etude
+:Etude rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :aSite ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Lieu
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :identifiantEtude ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ;
+       rdfs:comment "Research study or protocol in which participants are followed."@en ;
+       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+       rdfs:label "Étude"@fr .
+
+
+###  https://w3id.org/promess/ontology#Evenement
+:Evenement rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :concerneParticipantEvenement ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Participant
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :survientLorsDe ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Visite
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :dateEvenement ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:date
+                           ] ;
+           rdfs:comment "Relevant event occurring during study follow-up."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "Événement"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExamenImagerie
+:ExamenImagerie rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :concerneParticipantExamen ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Participant
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :examenRealiseLorsDe ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Visite
+                                ] ;
+                rdfs:comment "Imaging examination performed during follow-up."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "ExamenImagerie"@fr .
+
+
+###  https://w3id.org/promess/ontology#Exposition
+:Exposition rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :concerneParticipantExposition ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Participant
+                            ] ;
+            rdfs:comment "Any exposure relevant to the participant or disease process."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "Exposition"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionAir
+:ExpositionAir rdf:type owl:Class ;
+               rdfs:subClassOf :ExpositionEnvironnementale ;
+               rdfs:comment "Exposure through air."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "ExpositionAir"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionAlimentaire
+:ExpositionAlimentaire rdf:type owl:Class ;
+                       rdfs:subClassOf :Exposition ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aConsommationEau ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :ConsommationEau
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aFrequenceConsommation ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :FrequenceConsommation
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aHabitudeAlimentaire ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :HabitudeAlimentaire
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aModeCuisson ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :ModeCuisson
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aNiveauTransformation ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :NiveauTransformation
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aOrigineAliments ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :OrigineAliments
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :aRegimeAlimentaire ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :RegimeAlimentaire
+                                       ] ;
+                       rdfs:comment "Dietary exposure."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "ExpositionAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionChimique
+:ExpositionChimique rdf:type owl:Class ;
+                    rdfs:subClassOf :ExpositionEnvironnementale ;
+                    rdfs:comment "Chemical environmental exposure."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "ExpositionChimique"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionEau
+:ExpositionEau rdf:type owl:Class ;
+               rdfs:subClassOf :ExpositionEnvironnementale ;
+               rdfs:comment "Exposure through water."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "ExpositionEau"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionEnvironnementale
+:ExpositionEnvironnementale rdf:type owl:Class ;
+                            rdfs:subClassOf :Exposition ;
+                            rdfs:comment "Intermediate environmental exposure class."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                            rdfs:label "ExpositionEnvironnementale"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionHormonale
+:ExpositionHormonale rdf:type owl:Class ;
+                     rdfs:subClassOf :Exposition ;
+                     rdfs:comment "Hormonal exposure."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "ExpositionHormonale"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionMedicamenteuse
+:ExpositionMedicamenteuse rdf:type owl:Class ;
+                          rdfs:subClassOf :Exposition ;
+                          rdfs:comment "Medication-related exposure."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                          rdfs:label "ExpositionMédicamenteuse"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionMicrobiote
+:ExpositionMicrobiote rdf:type owl:Class ;
+                      rdfs:subClassOf :Exposition ;
+                      rdfs:comment "Microbiota-related exposure/profile."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "ExpositionMicrobiote"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionPollution
+:ExpositionPollution rdf:type owl:Class ;
+                     rdfs:subClassOf :ExpositionEnvironnementale ;
+                     rdfs:comment "Exposure to pollution such as fine particles."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "ExpositionPollution"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionProfessionnelle
+:ExpositionProfessionnelle rdf:type owl:Class ;
+                           rdfs:subClassOf :Exposition ;
+                           rdfs:comment "Occupational exposure."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "ExpositionProfessionnelle"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionSol
+:ExpositionSol rdf:type owl:Class ;
+               rdfs:subClassOf :ExpositionEnvironnementale ;
+               rdfs:comment "Exposure through soil."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "ExpositionSol"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionStress
+:ExpositionStress rdf:type owl:Class ;
+                  rdfs:subClassOf :Exposition ;
+                  rdfs:comment "Stress-related exposure."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "ExpositionStress"@fr .
+
+
+###  https://w3id.org/promess/ontology#ExpositionTabagique
+:ExpositionTabagique rdf:type owl:Class ;
+                     rdfs:subClassOf :Exposition ;
+                     rdfs:comment "Smoking or tobacco-related exposure."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "ExpositionTabagique"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurBiologique
+:FacteurBiologique rdf:type owl:Class ;
+                   rdfs:subClassOf :FacteurDeRisque ;
+                   rdfs:comment "Biological risk factor."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "FacteurBiologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurClinique
+:FacteurClinique rdf:type owl:Class ;
+                 rdfs:subClassOf :FacteurDeRisque ;
+                 rdfs:comment "Clinical risk factor."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "FacteurClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurComportemental
+:FacteurComportemental rdf:type owl:Class ;
+                       rdfs:subClassOf :FacteurDeRisque ;
+                       rdfs:comment "Behavior-related risk factor."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "FacteurComportemental"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurDeRisque
+:FacteurDeRisque rdf:type owl:Class ;
+                 rdfs:comment "Any factor associated with increased disease risk."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "FacteurDeRisque"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurEnvironnemental
+:FacteurEnvironnemental rdf:type owl:Class ;
+                        rdfs:subClassOf :FacteurDeRisque ;
+                        rdfs:comment "General environmental risk factor."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "FacteurEnvironnemental"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurFamilial
+:FacteurFamilial rdf:type owl:Class ;
+                 rdfs:subClassOf :FacteurDeRisque ;
+                 rdfs:comment "Family history or familial risk factor."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "FacteurFamilial"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurGenetique
+:FacteurGenetique rdf:type owl:Class ;
+                  rdfs:subClassOf :FacteurDeRisque ;
+                  rdfs:comment "Genetic risk factor."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "FacteurGénétique"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurPsychologique
+:FacteurPsychologique rdf:type owl:Class ;
+                      rdfs:subClassOf :FacteurDeRisque ;
+                      rdfs:comment "Psychological risk factor."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "FacteurPsychologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#FacteurRhumatoide
+:FacteurRhumatoide rdf:type owl:Class ;
+                   rdfs:subClassOf :BiomarqueurImmunologique ;
+                   rdfs:comment "Rheumatoid factor biomarker type."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "FacteurRhumatoïde"@fr .
+
+
+###  https://w3id.org/promess/ontology#FrequenceConsommation
+:FrequenceConsommation rdf:type owl:Class ;
+                       rdfs:comment "Consumption frequency descriptor."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "FréquenceConsommation"@fr .
+
+
+###  https://w3id.org/promess/ontology#Fruits
+:Fruits rdf:type owl:Class ;
+        rdfs:subClassOf :TypeAliment ;
+        owl:disjointWith :Legumes ,
+                         :Poisson ,
+                         :ProduitsLaitiers ,
+                         :Snacks ,
+                         :Sucreries ,
+                         :Viande ;
+        rdfs:comment "Fruits."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Fruits"@fr .
+
+
+###  https://w3id.org/promess/ontology#GroupeApparentePremierDegre
+:GroupeApparentePremierDegre rdf:type owl:Class ;
+                             rdfs:subClassOf :GroupeDeParticipants ;
+                             owl:disjointWith :GroupeHautRisqueSansCSA ,
+                                              :GroupePRDebutante ,
+                                              :GroupeTresHautRisque ;
+                             rdfs:comment "Participants related at first degree."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                             rdfs:label "GroupeApparentéPremierDegré"@fr .
+
+
+###  https://w3id.org/promess/ontology#GroupeDeParticipants
+:GroupeDeParticipants rdf:type owl:Class ;
+                      rdfs:comment "Cohort subgroup used to organize participants."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "GroupeDeParticipants"@fr .
+
+
+###  https://w3id.org/promess/ontology#GroupeHautRisqueSansCSA
+:GroupeHautRisqueSansCSA rdf:type owl:Class ;
+                         rdfs:subClassOf :GroupeDeParticipants ;
+                         owl:disjointWith :GroupePRDebutante ,
+                                          :GroupeTresHautRisque ;
+                         rdfs:comment "High-risk participant group without CSA."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                         rdfs:label "GroupeHautRisqueSansCSA"@fr .
+
+
+###  https://w3id.org/promess/ontology#GroupePRDebutante
+:GroupePRDebutante rdf:type owl:Class ;
+                   rdfs:subClassOf :GroupeDeParticipants ;
+                   owl:disjointWith :GroupeTresHautRisque ;
+                   rdfs:comment "Early rheumatoid arthritis participant group."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "GroupePRDébutante"@fr .
+
+
+###  https://w3id.org/promess/ontology#GroupeTresHautRisque
+:GroupeTresHautRisque rdf:type owl:Class ;
+                      rdfs:subClassOf :GroupeDeParticipants ;
+                      rdfs:comment "Participant group with very high risk profile."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "GroupeTrèsHautRisque"@fr .
+
+
+###  https://w3id.org/promess/ontology#HabitudeAlimentaire
+:HabitudeAlimentaire rdf:type owl:Class ;
+                     rdfs:comment "Dietary habit pattern descriptor."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "HabitudeAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#IRM
+:IRM rdf:type owl:Class ;
+     rdfs:subClassOf :ExamenImagerie ;
+     rdfs:comment "MRI examination."@en ;
+     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+     rdfs:label "IRM"@fr .
+
+
+###  https://w3id.org/promess/ontology#Infirmier
+:Infirmier rdf:type owl:Class ;
+           rdfs:subClassOf :Investigateur ;
+           rdfs:comment "Nurse involved in study care or follow-up."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "Infirmier"@fr .
+
+
+###  https://w3id.org/promess/ontology#Investigateur
+:Investigateur rdf:type owl:Class ;
+               rdfs:subClassOf :Personne ;
+               rdfs:comment "Study investigator involved in PROMESS activities."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "Investigateur"@fr .
+
+
+###  https://w3id.org/promess/ontology#Legumes
+:Legumes rdf:type owl:Class ;
+         rdfs:subClassOf :TypeAliment ;
+         owl:disjointWith :Poisson ,
+                          :ProduitsLaitiers ,
+                          :Snacks ,
+                          :Sucreries ,
+                          :Viande ;
+         rdfs:comment "Vegetables."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Légumes"@fr .
+
+
+###  https://w3id.org/promess/ontology#Lieu
+:Lieu rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :latitude ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:decimal
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :longitude ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:decimal
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :nomLieu ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ;
+      rdfs:comment "Site, center, place, or physical location."@en ;
+      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+      rdfs:label "Lieu"@fr .
+
+
+###  https://w3id.org/promess/ontology#Medecin
+:Medecin rdf:type owl:Class ;
+         rdfs:subClassOf :Investigateur ;
+         rdfs:comment "Physician involved in participant care or study tasks."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Médecin"@fr .
+
+
+###  https://w3id.org/promess/ontology#Mesure
+:Mesure rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :concerneParticipantMesure ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Participant
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :estRealiseeLorsDe ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Visite
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :aUnite ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :aValeurNumerique ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:decimal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :aValeurTexte ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ;
+        rdfs:comment "Any measurement collected in the study."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Mesure"@fr .
+
+
+###  https://w3id.org/promess/ontology#MesureBiologique
+:MesureBiologique rdf:type owl:Class ;
+                  rdfs:subClassOf :Mesure ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :aUniteBiomarqueur ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :aValeurBiomarqueur ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:decimal
+                                  ] ;
+                  rdfs:comment "Biological measurement."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "MesureBiologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#MesureClinique
+:MesureClinique rdf:type owl:Class ;
+                rdfs:subClassOf :Mesure ;
+                rdfs:comment "Clinical measurement."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "MesureClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#MesureExposomique
+:MesureExposomique rdf:type owl:Class ;
+                   rdfs:subClassOf :Mesure ;
+                   rdfs:comment "Exposomic measurement."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "MesureExposomique"@fr .
+
+
+###  https://w3id.org/promess/ontology#MesureImagerie
+:MesureImagerie rdf:type owl:Class ;
+                rdfs:subClassOf :Mesure ;
+                rdfs:comment "Imaging-derived measurement."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "MesureImagerie"@fr .
+
+
+###  https://w3id.org/promess/ontology#MesurePsychologique
+:MesurePsychologique rdf:type owl:Class ;
+                     rdfs:subClassOf :Mesure ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :aScore ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:decimal
+                                     ] ;
+                     rdfs:comment "Psychological measurement."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "MesurePsychologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#ModeCuisson
+:ModeCuisson rdf:type owl:Class ;
+             rdfs:comment "Cooking mode descriptor."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "ModeCuisson"@fr .
+
+
+###  https://w3id.org/promess/ontology#NiveauTransformation
+:NiveauTransformation rdf:type owl:Class ;
+                      rdfs:comment "Degree of food processing descriptor."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "NiveauTransformation"@fr .
+
+
+###  https://w3id.org/promess/ontology#NonProgression
+:NonProgression rdf:type owl:Class ;
+                rdfs:subClassOf :ResultatDEvolution ;
+                owl:disjointWith :ProgressionVersArthrite ,
+                                 :ProgressionVersPR ;
+                rdfs:comment "Outcome indicating no progression."@en ;
+                rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                rdfs:label "NonProgression"@fr .
+
+
+###  https://w3id.org/promess/ontology#Ongles
+:Ongles rdf:type owl:Class ;
+        rdfs:subClassOf :PrelevementBiologique ;
+        owl:disjointWith :Salive ,
+                         :Sang ,
+                         :Selles ,
+                         :Urines ;
+        rdfs:comment "Nail sample."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Ongles"@fr .
+
+
+###  https://w3id.org/promess/ontology#OrigineAliments
+:OrigineAliments rdf:type owl:Class ;
+                 rdfs:comment "Origin/source of foods descriptor."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "OrigineAliments"@fr .
+
+
+###  https://w3id.org/promess/ontology#ParametreAnthropometrique
+:ParametreAnthropometrique rdf:type owl:Class ;
+                           rdfs:subClassOf :FacteurClinique ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :bmi ;
+                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:decimal
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :poids ;
+                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:decimal
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :taille ;
+                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:decimal
+                                           ] ;
+                           rdfs:comment "Anthropometric parameter."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                           rdfs:label "ParamètreAnthropométrique"@fr .
+
+
+###  https://w3id.org/promess/ontology#Participant
+:Participant rdf:type owl:Class ;
+             rdfs:subClassOf :Personne ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :estSuiviDans ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Etude
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :appartientAuGroupe ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :GroupeDeParticipants
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :identifiantParticipant ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:comment "Person enrolled or followed in the study."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Participant"@fr .
+
+
+###  https://w3id.org/promess/ontology#ParticulesFines
+:ParticulesFines rdf:type owl:Class ;
+                 rdfs:subClassOf :AgentExposition ;
+                 rdfs:comment "Fine-particle exposure agent."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "ParticulesFines"@fr .
+
+
+###  https://w3id.org/promess/ontology#Personne
+:Personne rdf:type owl:Class ;
+          rdfs:comment "Human actor in the PROMESS domain."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "Personne"@fr .
+
+
+###  https://w3id.org/promess/ontology#Poisson
+:Poisson rdf:type owl:Class ;
+         rdfs:subClassOf :TypeAliment ;
+         owl:disjointWith :ProduitsLaitiers ,
+                          :Snacks ,
+                          :Sucreries ,
+                          :Viande ;
+         rdfs:comment "Fish."@en ;
+         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+         rdfs:label "Poisson"@fr .
+
+
+###  https://w3id.org/promess/ontology#PolyarthriteRhumatoide
+:PolyarthriteRhumatoide rdf:type owl:Class ;
+                        rdfs:subClassOf :ConditionMedicale ;
+                        rdfs:comment "Rheumatoid arthritis."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "PolyarthriteRhumatoïde"@fr .
+
+
+###  https://w3id.org/promess/ontology#PrelevementBiologique
+:PrelevementBiologique rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :prelevementRealiseLorsDe ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Visite
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :provientDeParticipant ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Participant
+                                       ] ;
+                       rdfs:comment "Biological sample collected from a participant."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                       rdfs:label "PrélèvementBiologique"@fr .
+
+
+###  https://w3id.org/promess/ontology#ProduitsLaitiers
+:ProduitsLaitiers rdf:type owl:Class ;
+                  rdfs:subClassOf :TypeAliment ;
+                  owl:disjointWith :Snacks ,
+                                   :Sucreries ,
+                                   :Viande ;
+                  rdfs:comment "Dairy products."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "ProduitsLaitiers"@fr .
+
+
+###  https://w3id.org/promess/ontology#ProgressionVersArthrite
+:ProgressionVersArthrite rdf:type owl:Class ;
+                         rdfs:subClassOf :ResultatDEvolution ;
+                         owl:disjointWith :ProgressionVersPR ;
+                         rdfs:comment "Outcome indicating progression toward clinical arthritis."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                         rdfs:label "ProgressionVersArthrite"@fr .
+
+
+###  https://w3id.org/promess/ontology#ProgressionVersPR
+:ProgressionVersPR rdf:type owl:Class ;
+                   rdfs:subClassOf :ResultatDEvolution ;
+                   rdfs:comment "Outcome indicating progression toward rheumatoid arthritis."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "ProgressionVersPR"@fr .
+
+
+###  https://w3id.org/promess/ontology#Psychologue
+:Psychologue rdf:type owl:Class ;
+             rdfs:subClassOf :Investigateur ;
+             rdfs:comment "Psychologist involved in study or assessment."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Psychologue"@fr .
+
+
+###  https://w3id.org/promess/ontology#QualiteDeVie
+:QualiteDeVie rdf:type owl:Class ;
+              rdfs:subClassOf :FacteurPsychologique ;
+              rdfs:comment "Quality of life factor retained under psychological factors."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "QualitéDeVie"@fr .
+
+
+###  https://w3id.org/promess/ontology#RegimeAlimentaire
+:RegimeAlimentaire rdf:type owl:Class ;
+                   rdfs:comment "Dietary regimen descriptor."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                   rdfs:label "RégimeAlimentaire"@fr .
+
+
+###  https://w3id.org/promess/ontology#ResultatClinique
+:ResultatClinique rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :concerneParticipantResultat ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Participant
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :commentaireClinique ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :dateResultat ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:date
+                                  ] ;
+                  rdfs:comment "Clinical outcome or confirmation result."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                  rdfs:label "RésultatClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#ResultatDEvolution
+:ResultatDEvolution rdf:type owl:Class ;
+                    rdfs:subClassOf :ResultatClinique ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :progresseVersCondition ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :ConditionMedicale
+                                    ] ;
+                    owl:disjointWith :ResultatDeConfirmation ;
+                    rdfs:comment "Clinical evolution outcome branch."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "RésultatDEvolution"@fr .
+
+
+###  https://w3id.org/promess/ontology#ResultatDeConfirmation
+:ResultatDeConfirmation rdf:type owl:Class ;
+                        rdfs:subClassOf :ResultatClinique ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :confirmeCondition ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :ConditionMedicale
+                                        ] ;
+                        rdfs:comment "Confirmation-result branch."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                        rdfs:label "RésultatDeConfirmation"@fr .
+
+
+###  https://w3id.org/promess/ontology#Salive
+:Salive rdf:type owl:Class ;
+        rdfs:subClassOf :PrelevementBiologique ;
+        owl:disjointWith :Sang ,
+                         :Selles ,
+                         :Urines ;
+        rdfs:comment "Saliva sample."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Salive"@fr .
+
+
+###  https://w3id.org/promess/ontology#Sang
+:Sang rdf:type owl:Class ;
+      rdfs:subClassOf :PrelevementBiologique ;
+      owl:disjointWith :Selles ,
+                       :Urines ;
+      rdfs:comment "Blood sample."@en ;
+      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+      rdfs:label "Sang"@fr .
+
+
+###  https://w3id.org/promess/ontology#ScoreClinique
+:ScoreClinique rdf:type owl:Class ;
+               rdfs:subClassOf :FacteurClinique ;
+               rdfs:comment "Clinical score or index."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "ScoreClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#Selles
+:Selles rdf:type owl:Class ;
+        rdfs:subClassOf :PrelevementBiologique ;
+        owl:disjointWith :Urines ;
+        rdfs:comment "Stool sample."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Selles"@fr .
+
+
+###  https://w3id.org/promess/ontology#Serum
+:Serum rdf:type owl:Class ;
+       rdfs:subClassOf :Sang ;
+       rdfs:comment "Serum fraction derived from blood."@en ;
+       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+       rdfs:label "Sérum"@fr .
+
+
+###  https://w3id.org/promess/ontology#SigneClinique
+:SigneClinique rdf:type owl:Class ;
+               rdfs:subClassOf :FacteurClinique ;
+               rdfs:comment "Clinically observed sign."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "SigneClinique"@fr .
+
+
+###  https://w3id.org/promess/ontology#Silice
+:Silice rdf:type owl:Class ;
+        rdfs:subClassOf :AgentExposition ;
+        rdfs:comment "Silica exposure agent."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Silice"@fr .
+
+
+###  https://w3id.org/promess/ontology#Snacks
+:Snacks rdf:type owl:Class ;
+        rdfs:subClassOf :TypeAliment ;
+        owl:disjointWith :Sucreries ,
+                         :Viande ;
+        rdfs:comment "Snack foods."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Snacks"@fr .
+
+
+###  https://w3id.org/promess/ontology#SoutienSocial
+:SoutienSocial rdf:type owl:Class ;
+               rdfs:subClassOf :FacteurPsychologique ;
+               rdfs:comment "Social support factor retained under psychological factors."@en ;
+               rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+               rdfs:label "SoutienSocial"@fr .
+
+
+###  https://w3id.org/promess/ontology#Stress
+:Stress rdf:type owl:Class ;
+        rdfs:subClassOf :FacteurPsychologique ;
+        rdfs:comment "Stress-related psychological factor."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Stress"@fr .
+
+
+###  https://w3id.org/promess/ontology#SubstanceTabagique
+:SubstanceTabagique rdf:type owl:Class ;
+                    rdfs:comment "Controlled family for tobacco-related substances."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                    rdfs:label "SubstanceTabagique"@fr .
+
+
+###  https://w3id.org/promess/ontology#Sucreries
+:Sucreries rdf:type owl:Class ;
+           rdfs:subClassOf :TypeAliment ;
+           owl:disjointWith :Viande ;
+           rdfs:comment "Sweets."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "Sucreries"@fr .
+
+
+###  https://w3id.org/promess/ontology#Symptome
+:Symptome rdf:type owl:Class ;
+          rdfs:subClassOf :FacteurClinique ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :intensiteSymptome ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:decimal
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :presenceSymptome ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:boolean
+                          ] ;
+          rdfs:comment "Participant-reported or observed symptom."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "Symptôme"@fr .
+
+
+###  https://w3id.org/promess/ontology#Tabac
+:Tabac rdf:type owl:Class ;
+       rdfs:subClassOf :SubstanceTabagique ;
+       rdfs:comment "Tobacco substance."@en ;
+       rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+       rdfs:label "Tabac"@fr .
+
+
+###  https://w3id.org/promess/ontology#Temporalite
+:Temporalite rdf:type owl:Class ;
+             rdfs:comment "Time-related structure for follow-up, symptoms, and biology."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "Temporalité"@fr .
+
+
+###  https://w3id.org/promess/ontology#TemporaliteBiologie
+:TemporaliteBiologie rdf:type owl:Class ;
+                     rdfs:subClassOf :Temporalite ;
+                     rdfs:comment "Biology temporality structure."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                     rdfs:label "TemporalitéBiologie"@fr .
+
+
+###  https://w3id.org/promess/ontology#TemporaliteSymptomes
+:TemporaliteSymptomes rdf:type owl:Class ;
+                      rdfs:subClassOf :Temporalite ;
+                      rdfs:comment "Symptom temporality structure."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                      rdfs:label "TemporalitéSymptômes"@fr .
+
+
+###  https://w3id.org/promess/ontology#TempsSuivi
+:TempsSuivi rdf:type owl:Class ;
+            rdfs:subClassOf :Temporalite ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :ordreTempsSuivi ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:integer
+                            ] ;
+            rdfs:comment "Follow-up time structure."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "TempsSuivi"@fr .
+
+
+###  https://w3id.org/promess/ontology#Traitement
+:Traitement rdf:type owl:Class ;
+            rdfs:comment "Therapeutic intervention or medication received by a participant."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "Traitement"@fr .
+
+
+###  https://w3id.org/promess/ontology#TypeAliment
+:TypeAliment rdf:type owl:Class ;
+             rdfs:comment "Food type descriptor class."@en ;
+             rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+             rdfs:label "TypeAliment"@fr .
+
+
+###  https://w3id.org/promess/ontology#TypeDeVisite
+:TypeDeVisite rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :codeTypeDeVisite ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              rdfs:comment "Controlled type used to classify visits such as J0 or S26."@en ;
+              rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+              rdfs:label "TypeDeVisite"@fr .
+
+
+###  https://w3id.org/promess/ontology#Urines
+:Urines rdf:type owl:Class ;
+        rdfs:subClassOf :PrelevementBiologique ;
+        rdfs:comment "Urine sample."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Urines"@fr .
+
+
+###  https://w3id.org/promess/ontology#Viande
+:Viande rdf:type owl:Class ;
+        rdfs:subClassOf :TypeAliment ;
+        rdfs:comment "Meat."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Viande"@fr .
+
+
+###  https://w3id.org/promess/ontology#Visite
+:Visite rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :aTemporalite ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :TempsSuivi
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :aTypeDeVisite ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :TypeDeVisite
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :appartientAEtude ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Etude
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :concerneParticipant ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Participant
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :seDerouleDans ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Lieu
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :dateVisite ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:date
+                        ] ;
+        rdfs:comment "Study encounter or protocol visit."@en ;
+        rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+        rdfs:label "Visite"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteAnticipee
+:VisiteAnticipee rdf:type owl:Class ;
+                 rdfs:subClassOf :TypeDeVisite ;
+                 owl:disjointWith :VisiteInclusion ,
+                                  :VisiteJ0 ,
+                                  :VisiteS104 ,
+                                  :VisiteS26 ,
+                                  :VisiteS52 ;
+                 rdfs:comment "Unscheduled or early visit type."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "VisiteAnticipée"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteInclusion
+:VisiteInclusion rdf:type owl:Class ;
+                 rdfs:subClassOf :TypeDeVisite ;
+                 owl:disjointWith :VisiteJ0 ,
+                                  :VisiteS104 ,
+                                  :VisiteS26 ,
+                                  :VisiteS52 ;
+                 rdfs:comment "Inclusion or baseline visit type."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+                 rdfs:label "VisiteInclusion"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteJ0
+:VisiteJ0 rdf:type owl:Class ;
+          rdfs:subClassOf :TypeDeVisite ;
+          owl:disjointWith :VisiteS104 ,
+                           :VisiteS26 ,
+                           :VisiteS52 ;
+          rdfs:comment "Day 0 visit type."@en ;
+          rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+          rdfs:label "VisiteJ0"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteS104
+:VisiteS104 rdf:type owl:Class ;
+            rdfs:subClassOf :TypeDeVisite ;
+            owl:disjointWith :VisiteS26 ,
+                             :VisiteS52 ;
+            rdfs:comment "Week 104 visit type."@en ;
+            rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+            rdfs:label "VisiteS104"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteS26
+:VisiteS26 rdf:type owl:Class ;
+           rdfs:subClassOf :TypeDeVisite ;
+           owl:disjointWith :VisiteS52 ;
+           rdfs:comment "Week 26 visit type."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "VisiteS26"@fr .
+
+
+###  https://w3id.org/promess/ontology#VisiteS52
+:VisiteS52 rdf:type owl:Class ;
+           rdfs:subClassOf :TypeDeVisite ;
+           rdfs:comment "Week 52 visit type."@en ;
+           rdfs:isDefinedBy <https://w3id.org/promess/ontology> ;
+           rdfs:label "VisiteS52"@fr .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

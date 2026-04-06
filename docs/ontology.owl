@@ -1,0 +1,3699 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/promess/ontology#"
+     xml:base="https://w3id.org/promess/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/promess/ontology">
+        <owl:versionIRI rdf:resource="https://w3id.org/promess/ontology/0.1-draft"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-06</terms:created>
+        <terms:creator>Nushrat Jahan</terms:creator>
+        <terms:creator>Lylia Abrouk</terms:creator>
+        <terms:creator>Sandra Bringay</terms:creator>
+        <terms:creator>Zubeyir Salis</terms:creator>
+        <terms:description xml:lang="en">Draft version of the PROMESS ontology prepared for conceptual modeling, review, documentation, and further refinement.</terms:description>
+        <terms:description xml:lang="fr">Version préliminaire de l’ontologie PROMESS préparée pour la modélisation conceptuelle, la revue, la documentation et l’affinement ultérieur.</terms:description>
+        <terms:language>en</terms:language>
+        <terms:language>fr</terms:language>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-06</terms:modified>
+        <terms:publisher xml:lang="fr">Université de Montpellier, LIRMM; INSERM, PhyMedExp</terms:publisher>
+        <terms:title xml:lang="fr">Ontologie PROMESS</terms:title>
+        <terms:title xml:lang="en">PROMESS Ontology</terms:title>
+        <vann:preferredNamespacePrefix>promess</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/promess/ontology#</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="fr">Ontologie PROMESS</rdfs:label>
+        <rdfs:label xml:lang="en">PROMESS Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="en">Draft v0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aAgentExpositionAir -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aAgentExpositionAir">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAir"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Exposure agent for air exposure. Suggested cardinality: ExpositionAir -&gt; AgentExposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aAgentExpositionAir</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aAgentExpositionChimique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aAgentExpositionChimique">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionChimique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Exposure agent for chemical exposure. Suggested cardinality: ExpositionChimique -&gt; AgentExposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aAgentExpositionChimique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aAgentExpositionPollution -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aAgentExpositionPollution">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#agentPollutionDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionPollution"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Exposure agent for pollution exposure. Suggested cardinality: ExpositionPollution -&gt; AgentExposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aAgentExpositionPollution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aAgentExpositionProfessionnelle -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aAgentExpositionProfessionnelle">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#agentProfessionnelDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionProfessionnelle"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Exposure agent for occupational exposure. Suggested cardinality: ExpositionProfessionnelle -&gt; AgentExposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aAgentExpositionProfessionnelle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aComplementAlimentaire -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aComplementAlimentaire">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ComplementAlimentaire"/>
+        <rdfs:comment xml:lang="en">Dietary supplement descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; ComplementAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aComplementAlimentaire</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aCondition">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#conditionChezParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Participant condition. Suggested cardinality: Participant -&gt; ConditionMedicale = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aConsommationEau -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aConsommationEau">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#consommationEauDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ConsommationEau"/>
+        <rdfs:comment xml:lang="en">Water consumption descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; ConsommationEau = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aConsommationEau</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aEvenement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aEvenement">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Evenement"/>
+        <rdfs:comment xml:lang="en">Study-relevant event for participant. Suggested cardinality: Participant -&gt; Evenement = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aEvenement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aExamenImagerie -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aExamenImagerie">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#concerneParticipantExamen"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:comment xml:lang="en">Participant imaging exam. Suggested cardinality: Participant -&gt; ExamenImagerie = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aExamenImagerie</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aFacteurDeRisque -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aFacteurDeRisque">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">General participant-risk-factor relation. Suggested cardinality: Participant -&gt; FacteurDeRisque = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aFacteurDeRisque</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aFacteurExpositionnel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aFacteurExpositionnel">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Inverse exposure-risk relation. Suggested cardinality: ConditionMedicale -&gt; Exposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aFacteurExpositionnel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aFacteurPsychologique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aFacteurPsychologique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#facteurPsychologiqueChezParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Participant psychological factor. Suggested cardinality: Participant -&gt; FacteurPsychologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aFacteurPsychologique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aFrequenceConsommation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aFrequenceConsommation">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#frequenceDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#FrequenceConsommation"/>
+        <rdfs:comment xml:lang="en">Consumption frequency descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; FrequenceConsommation = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aFrequenceConsommation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aHabitudeAlimentaire -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aHabitudeAlimentaire">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#habitudeDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#HabitudeAlimentaire"/>
+        <rdfs:comment xml:lang="en">Dietary habit descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; HabitudeAlimentaire = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aHabitudeAlimentaire</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aMesure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aMesure">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#concerneParticipantMesure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:comment xml:lang="en">Participant has measurements. Suggested cardinality: Participant -&gt; Mesure = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aMesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aModeCuisson -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aModeCuisson">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#modeCuissonDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ModeCuisson"/>
+        <rdfs:comment xml:lang="en">Cooking mode descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; ModeCuisson = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aModeCuisson</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aNiveauTransformation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aNiveauTransformation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#NiveauTransformation"/>
+        <rdfs:comment xml:lang="en">Degree of processing descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; NiveauTransformation = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aNiveauTransformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aOrigineAliments -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aOrigineAliments">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#origineDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#OrigineAliments"/>
+        <rdfs:comment xml:lang="en">Food origin descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; OrigineAliments = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aOrigineAliments</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aPrelevementBiologique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aPrelevementBiologique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#provientDeParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:comment xml:lang="en">Participant biological sample collection. Suggested cardinality: Participant -&gt; PrelevementBiologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aPrelevementBiologique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aRegimeAlimentaire -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aRegimeAlimentaire">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#regimeDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#RegimeAlimentaire"/>
+        <rdfs:comment xml:lang="en">Dietary regimen descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; RegimeAlimentaire = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aRegimeAlimentaire</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aResultatClinique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aResultatClinique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#concerneParticipantResultat"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:comment xml:lang="en">General outcome link. Suggested cardinality: Participant -&gt; ResultatClinique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aResultatClinique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aSigneClinique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aSigneClinique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#signeChezParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:comment xml:lang="en">Participant clinical sign. Suggested cardinality: Participant -&gt; SigneClinique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aSigneClinique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aSite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aSite">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#estSiteDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:comment xml:lang="en">Study site or center. Suggested cardinality: Etude -&gt; Lieu = 1..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aSite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aSubstanceTabagique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aSubstanceTabagique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#substanceTabagiqueDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionTabagique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#SubstanceTabagique"/>
+        <rdfs:comment xml:lang="en">Tobacco/cannabis descriptor. Suggested cardinality: ExpositionTabagique -&gt; SubstanceTabagique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aSubstanceTabagique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aTemporalite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aTemporalite">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#temporaliteDeVisite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#TempsSuivi"/>
+        <rdfs:comment xml:lang="en">Visit has one follow-up time point. Suggested cardinality: Visite -&gt; TempsSuivi = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aTemporalite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aTypeAliment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aTypeAliment">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#typeAlimentDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <rdfs:comment xml:lang="en">Food type descriptor. Suggested cardinality: ExpositionAlimentaire -&gt; TypeAliment = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aTypeAliment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aTypeDeVisite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aTypeDeVisite">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#typeDeVisiteDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <rdfs:comment xml:lang="en">Each visit must have exactly one visit type. Suggested cardinality: Visite -&gt; TypeDeVisite = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aTypeDeVisite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aVisite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#aVisite">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Participant may have many visits. Suggested cardinality: Participant -&gt; Visite = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aVisite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#accueilleVisite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#accueilleVisite">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Location hosting visits. Suggested cardinality: Lieu -&gt; Visite = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">accueilleVisite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#agentAirDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#agentAirDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aAgentExpositionAir"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAir"/>
+        <rdfs:comment xml:lang="en">Inverse air agent relation. Suggested cardinality: AgentExposition -&gt; ExpositionAir = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">agentAirDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#agentChimiqueDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#agentChimiqueDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aAgentExpositionChimique"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionChimique"/>
+        <rdfs:comment xml:lang="en">Inverse chemical agent relation. Suggested cardinality: AgentExposition -&gt; ExpositionChimique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">agentChimiqueDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#agentPollutionDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#agentPollutionDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionPollution"/>
+        <rdfs:comment xml:lang="en">Inverse pollution agent relation. Suggested cardinality: AgentExposition -&gt; ExpositionPollution = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">agentPollutionDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#agentProfessionnelDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#agentProfessionnelDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionProfessionnelle"/>
+        <rdfs:comment xml:lang="en">Inverse occupational agent relation. Suggested cardinality: AgentExposition -&gt; ExpositionProfessionnelle = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">agentProfessionnelDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#analyseBiomarqueur -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#analyseBiomarqueur">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#biomarqueurAnalyseDans"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:comment xml:lang="en">Sample used for biomarker analysis. Suggested cardinality: PrelevementBiologique -&gt; Biomarqueur = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">analyseBiomarqueur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#appartientAEtude -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#appartientAEtude">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#comprendVisite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:comment xml:lang="en">Each visit belongs to one study. Suggested cardinality: Visite -&gt; Etude = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">appartientAEtude</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#appartientAEtudeGroupe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#appartientAEtudeGroupe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#inclutGroupe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:comment xml:lang="en">Inverse of group inclusion in study. Suggested cardinality: GroupeDeParticipants -&gt; Etude = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">appartientAEtudeGroupe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#appartientAuGroupe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#appartientAuGroupe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <rdfs:comment xml:lang="en">Participant group membership. Suggested cardinality: Participant -&gt; GroupeDeParticipants = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">appartientAuGroupe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#biomarqueurAnalyseDans -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#biomarqueurAnalyseDans">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:comment xml:lang="en">Inverse biomarker-analysis relation. Suggested cardinality: Biomarqueur -&gt; PrelevementBiologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">biomarqueurAnalyseDans</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#biomarqueurMesurePar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#biomarqueurMesurePar">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#mesureBiomarqueur"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#MesureBiologique"/>
+        <rdfs:comment xml:lang="en">Inverse biomarker-measurement relation. Suggested cardinality: Biomarqueur -&gt; MesureBiologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">biomarqueurMesurePar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#complementDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#complementDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aComplementAlimentaire"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ComplementAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse supplement descriptor relation. Suggested cardinality: ComplementAlimentaire -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">complementDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#comprendEvenement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#comprendEvenement">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Evenement"/>
+        <rdfs:comment xml:lang="en">Inverse of event during visit relation. Suggested cardinality: Visite -&gt; Evenement = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">comprendEvenement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#comprendExamenImagerie -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#comprendExamenImagerie">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#examenRealiseLorsDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:comment xml:lang="en">Visit includes imaging exams. Suggested cardinality: Visite -&gt; ExamenImagerie = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">comprendExamenImagerie</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#comprendMesure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#comprendMesure">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:comment xml:lang="en">Visit includes measurements. Suggested cardinality: Visite -&gt; Mesure = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">comprendMesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#comprendPrelevement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#comprendPrelevement">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#prelevementRealiseLorsDe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:comment xml:lang="en">Visit includes biological samples. Suggested cardinality: Visite -&gt; PrelevementBiologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">comprendPrelevement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#comprendVisite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#comprendVisite">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Study contains visits. Suggested cardinality: Etude -&gt; Visite = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">comprendVisite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipant">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aVisite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each visit concerns one participant in this conceptual model. Suggested cardinality: Visite -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipantEvenement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipantEvenement">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aEvenement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Evenement"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each event concerns one participant in this conceptual model. Suggested cardinality: Evenement -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipantEvenement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipantExamen -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipantExamen">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each imaging exam concerns one participant in this conceptual model. Suggested cardinality: ExamenImagerie -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipantExamen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipantExposition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipantExposition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each exposure concerns one participant in this conceptual model. Suggested cardinality: Exposition -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipantExposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipantMesure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipantMesure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each measurement concerns one participant in this conceptual model. Suggested cardinality: Mesure -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipantMesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#concerneParticipantResultat -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#concerneParticipantResultat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each clinical result concerns one participant in this conceptual model. Suggested cardinality: ResultatClinique -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">concerneParticipantResultat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#conditionChezParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#conditionChezParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse participant condition relation. Suggested cardinality: ConditionMedicale -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">conditionChezParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#confirmeCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#confirmeCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ResultatDeConfirmation"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Confirmation result targets one condition. Suggested cardinality: ResultatDeConfirmation -&gt; ConditionMedicale = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">confirmeCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#consommationEauDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#consommationEauDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ConsommationEau"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse water consumption descriptor relation. Suggested cardinality: ConsommationEau -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">consommationEauDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#contientParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#contientParticipant">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#appartientAuGroupe"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse of participant group membership. Suggested cardinality: GroupeDeParticipants -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">contientParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#detecte -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#detecte">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#estDetectePar"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:comment xml:lang="en">Imaging exam detects a clinical sign. Suggested cardinality: ExamenImagerie -&gt; SigneClinique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">detecte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#detecteSigneCliniqueMesure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#detecteSigneCliniqueMesure">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesureImagerie"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:comment xml:lang="en">Imaging-derived measurement detects a clinical sign. Suggested cardinality: MesureImagerie -&gt; SigneClinique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">detecteSigneCliniqueMesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estCibleDeProgression -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estCibleDeProgression">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#progresseVersCondition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ResultatDEvolution"/>
+        <rdfs:comment xml:lang="en">Inverse evolution target relation. Suggested cardinality: ConditionMedicale -&gt; ResultatDEvolution = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estCibleDeProgression</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estConfirmeePar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estConfirmeePar">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#confirmeCondition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ResultatDeConfirmation"/>
+        <rdfs:comment xml:lang="en">Inverse confirmation target relation. Suggested cardinality: ConditionMedicale -&gt; ResultatDeConfirmation = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estConfirmeePar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estDetectePar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estDetectePar">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:comment xml:lang="en">Inverse imaging-detection relation. Suggested cardinality: SigneClinique -&gt; ExamenImagerie = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estDetectePar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estEvaluePar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estEvaluePar">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#MesurePsychologique"/>
+        <rdfs:comment xml:lang="en">Inverse psychological evaluation relation. Suggested cardinality: FacteurPsychologique -&gt; MesurePsychologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estEvaluePar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estExposeA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estExposeA">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#concerneParticipantExposition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Participant has exposures. Suggested cardinality: Participant -&gt; Exposition = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estExposeA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estFacteurDeRisqueDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estFacteurDeRisqueDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aFacteurExpositionnel"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Exposure is a risk factor for a condition. Suggested cardinality: Exposition -&gt; ConditionMedicale = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estFacteurDeRisqueDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estRealiseeLorsDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estRealiseeLorsDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#comprendMesure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Measurement is performed during one visit. Suggested cardinality: Mesure -&gt; Visite = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estRealiseeLorsDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estRecuPar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estRecuPar">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Traitement"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse of treatment relation. Suggested cardinality: Traitement -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estRecuPar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estSiteDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estSiteDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:comment xml:lang="en">Inverse of study site relation. Suggested cardinality: Lieu -&gt; Etude = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estSiteDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#estSuiviDans -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#estSuiviDans">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#inclutParticipant"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:comment xml:lang="en">Each participant belongs to one study. Suggested cardinality: Participant -&gt; Etude = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">estSuiviDans</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#evalueFacteurPsychologique -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#evalueFacteurPsychologique">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#estEvaluePar"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesurePsychologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Psychological measurement evaluates psychological factor. Suggested cardinality: MesurePsychologique -&gt; FacteurPsychologique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">evalueFacteurPsychologique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#examenRealiseLorsDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#examenRealiseLorsDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Imaging exam linked to one visit. Suggested cardinality: ExamenImagerie -&gt; Visite = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">examenRealiseLorsDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#facteurConcerneParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#facteurConcerneParticipant">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aFacteurDeRisque"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse of participant-risk-factor relation. Suggested cardinality: FacteurDeRisque -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">facteurConcerneParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#facteurPsychologiqueChezParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#facteurPsychologiqueChezParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse participant-psychological factor relation. Suggested cardinality: FacteurPsychologique -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">facteurPsychologiqueChezParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#frequenceDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#frequenceDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#FrequenceConsommation"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse frequency descriptor relation. Suggested cardinality: FrequenceConsommation -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">frequenceDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#habitudeDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#habitudeDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#HabitudeAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse dietary habit descriptor relation. Suggested cardinality: HabitudeAlimentaire -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">habitudeDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#inclutGroupe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#inclutGroupe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <rdfs:comment xml:lang="en">Study includes participant groups. Suggested cardinality: Etude -&gt; GroupeDeParticipants = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">inclutGroupe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#inclutParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#inclutParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Study includes participants. Suggested cardinality: Etude -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">inclutParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#interagitAvec -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#interagitAvec">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#interagitAvec"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Interaction between risk factors. Suggested cardinality: FacteurDeRisque -&gt; FacteurDeRisque = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">interagitAvec</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#mesureBiomarqueur -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#mesureBiomarqueur">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesureBiologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:comment xml:lang="en">Biological measurement targets biomarker. Suggested cardinality: MesureBiologique -&gt; Biomarqueur = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">mesureBiomarqueur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#modeCuissonDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#modeCuissonDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ModeCuisson"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse cooking mode descriptor relation. Suggested cardinality: ModeCuisson -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">modeCuissonDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#niveauTransformationDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#niveauTransformationDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#aNiveauTransformation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#NiveauTransformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse processing descriptor relation. Suggested cardinality: NiveauTransformation -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">niveauTransformationDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#origineDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#origineDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#OrigineAliments"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse food origin descriptor relation. Suggested cardinality: OrigineAliments -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">origineDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#prelevementRealiseLorsDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#prelevementRealiseLorsDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Biological sample linked to one visit. Suggested cardinality: PrelevementBiologique -&gt; Visite = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">prelevementRealiseLorsDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#presenteSymptome -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#presenteSymptome">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#symptomeChezParticipant"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Symptome"/>
+        <rdfs:comment xml:lang="en">Participant symptoms. Suggested cardinality: Participant -&gt; Symptome = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">presenteSymptome</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#progresseVersCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#progresseVersCondition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ResultatDEvolution"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Evolution result targets one condition. Suggested cardinality: ResultatDEvolution -&gt; ConditionMedicale = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">progresseVersCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#provientDeParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#provientDeParticipant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Each biological sample comes from one participant. Suggested cardinality: PrelevementBiologique -&gt; Participant = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">provientDeParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#recoitTraitement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#recoitTraitement">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#estRecuPar"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Traitement"/>
+        <rdfs:comment xml:lang="en">Treatment exposure/intervention. Suggested cardinality: Participant -&gt; Traitement = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">recoitTraitement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#regimeDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#regimeDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#RegimeAlimentaire"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse dietary regimen descriptor relation. Suggested cardinality: RegimeAlimentaire -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">regimeDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#seDerouleDans -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#seDerouleDans">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#accueilleVisite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:comment xml:lang="en">Visit occurs at one place. Suggested cardinality: Visite -&gt; Lieu = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">seDerouleDans</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#signeChezParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#signeChezParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse sign relation. Suggested cardinality: SigneClinique -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">signeChezParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#signeDetecteParMesure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#signeDetecteParMesure">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#detecteSigneCliniqueMesure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#SigneClinique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#MesureImagerie"/>
+        <rdfs:comment xml:lang="en">Inverse imaging-measure sign relation. Suggested cardinality: SigneClinique -&gt; MesureImagerie = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">signeDetecteParMesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#substanceTabagiqueDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#substanceTabagiqueDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#SubstanceTabagique"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionTabagique"/>
+        <rdfs:comment xml:lang="en">Inverse tobacco-substance relation. Suggested cardinality: SubstanceTabagique -&gt; ExpositionTabagique = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">substanceTabagiqueDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#survientLorsDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#survientLorsDe">
+        <owl:inverseOf rdf:resource="https://w3id.org/promess/ontology#comprendEvenement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Evenement"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Event may occur during a visit. Suggested cardinality: Evenement -&gt; Visite = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">survientLorsDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#symptomeChezParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#symptomeChezParticipant">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Symptome"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:comment xml:lang="en">Inverse symptom relation. Suggested cardinality: Symptome -&gt; Participant = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">symptomeChezParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#temporaliteDeVisite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#temporaliteDeVisite">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#TempsSuivi"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Inverse of visit temporality. Suggested cardinality: TempsSuivi -&gt; Visite = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">temporaliteDeVisite</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#typeAlimentDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#typeAlimentDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#ExpositionAlimentaire"/>
+        <rdfs:comment xml:lang="en">Inverse food type descriptor relation. Suggested cardinality: TypeAliment -&gt; ExpositionAlimentaire = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">typeAlimentDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#typeDeVisiteDe -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/promess/ontology#typeDeVisiteDe">
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <rdfs:range rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:comment xml:lang="en">Inverse of visit typing. Suggested cardinality: TypeDeVisite -&gt; Visite = 0..*.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">typeDeVisiteDe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aScore -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aScore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesurePsychologique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Psychological score value. Suggested cardinality: MesurePsychologique -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aScore</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aUnite -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aUnite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Measurement unit. Suggested cardinality: Mesure -&gt; xsd:string = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aUnite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aUniteBiomarqueur -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aUniteBiomarqueur">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesureBiologique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Biomarker unit. Suggested cardinality: MesureBiologique -&gt; xsd:string = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aUniteBiomarqueur</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aValeurBiomarqueur -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aValeurBiomarqueur">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#MesureBiologique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Biomarker result value. Suggested cardinality: MesureBiologique -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aValeurBiomarqueur</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aValeurNumerique -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aValeurNumerique">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Generic scalar measurement value. Suggested cardinality: Mesure -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aValeurNumerique</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#aValeurTexte -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#aValeurTexte">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text result if needed. Suggested cardinality: Mesure -&gt; xsd:string = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">aValeurTexte</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#bmi -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#bmi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ParametreAnthropometrique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">BMI value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">bmi</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#codeTypeDeVisite -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#codeTypeDeVisite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code for visit type, e.g. J0, S26, S52. Suggested cardinality: TypeDeVisite -&gt; xsd:string = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">codeTypeDeVisite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#commentaireClinique -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#commentaireClinique">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Optional clinical comment. Suggested cardinality: ResultatClinique -&gt; xsd:string = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">commentaireClinique</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#dateEvenement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#dateEvenement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Evenement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Event date. Suggested cardinality: Evenement -&gt; xsd:date = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">dateEvenement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#dateResultat -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#dateResultat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Outcome/result date. Suggested cardinality: ResultatClinique -&gt; xsd:date = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">dateResultat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#dateVisite -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#dateVisite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Actual visit date. Suggested cardinality: Visite -&gt; xsd:date = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">dateVisite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#identifiantEtude -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#identifiantEtude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Study identifier. Suggested cardinality: Etude -&gt; xsd:string = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">identifiantEtude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#identifiantParticipant -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#identifiantParticipant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Unique participant identifier. Suggested cardinality: Participant -&gt; xsd:string = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">identifiantParticipant</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#intensiteSymptome -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#intensiteSymptome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Symptome"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Optional symptom intensity value. Suggested cardinality: Symptome -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">intensiteSymptome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#latitude -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#latitude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Latitude of place or site. Suggested cardinality: Lieu -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#longitude -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#longitude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Longitude of place or site. Suggested cardinality: Lieu -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#nomLieu -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#nomLieu">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Human-readable place or site name. Suggested cardinality: Lieu -&gt; xsd:string = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">nomLieu</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ordreTempsSuivi -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#ordreTempsSuivi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#TempsSuivi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Numeric order for longitudinal follow-up. Suggested cardinality: TempsSuivi -&gt; xsd:integer = 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ordreTempsSuivi</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#poids -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#poids">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ParametreAnthropometrique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Weight value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">poids</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#presenceSymptome -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#presenceSymptome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#Symptome"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Optional symptom presence flag. Suggested cardinality: Symptome -&gt; xsd:boolean = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">presenceSymptome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#taille -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/promess/ontology#taille">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/promess/ontology#ParametreAnthropometrique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Body size/height value if anthropometrics are represented as instances. Suggested cardinality: ParametreAnthropometrique -&gt; xsd:decimal = 0..1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">taille</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ACPA -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ACPA">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#BiomarqueurImmunologique"/>
+        <rdfs:comment xml:lang="en">Anti-citrullinated protein antibodies biomarker type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ACPA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ADN -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ADN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <rdfs:comment xml:lang="en">DNA derived from blood sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ADN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ARN -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ARN">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <rdfs:comment xml:lang="en">RNA derived from blood sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ARN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#AgentExposition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#AgentExposition">
+        <rdfs:comment xml:lang="en">Controlled family for exposure agents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">AgentExposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Alexithymie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Alexithymie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Alexithymia-related psychological factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Alexithymie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#AntecedentMedical -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#AntecedentMedical">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurClinique"/>
+        <rdfs:comment xml:lang="en">Medical history concept kept distinct from comorbidity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">AntécédentMédical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Anxiete -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Anxiete">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Anxiety-related psychological factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Anxiété</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ArthralgiesCliniquementSuspectes -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ArthralgiesCliniquementSuspectes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Clinically suspect arthralgia.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ArthralgiesCliniquementSuspectes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ArthriteClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ArthriteClinique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Clinically manifest arthritis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ArthriteClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Biomarqueur -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Biomarqueur">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurBiologique"/>
+        <rdfs:comment xml:lang="en">Biological marker evaluated by measurement or analysis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Biomarqueur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#BiomarqueurImmunologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#BiomarqueurImmunologique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:comment xml:lang="en">Immunological biomarker family.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">BiomarqueurImmunologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#BiomarqueurMicrobiote -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#BiomarqueurMicrobiote">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:comment xml:lang="en">Microbiota-related biomarker type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">BiomarqueurMicrobiote</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Boissons -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Boissons">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Cereales"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Fruits"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Legumes"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Poisson"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProduitsLaitiers"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Beverages.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Boissons</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#CRP -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#CRP">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#BiomarqueurImmunologique"/>
+        <rdfs:comment xml:lang="en">C-reactive protein biomarker type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">CRP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Cannabis -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Cannabis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#SubstanceTabagique"/>
+        <rdfs:comment xml:lang="en">Cannabis substance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Cannabis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Cellule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Cellule">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <rdfs:comment xml:lang="en">Cell fraction derived from blood.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Cellule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Cereales -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Cereales">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Fruits"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Legumes"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Poisson"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProduitsLaitiers"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Cereals/grains.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Céréales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Cheveux -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Cheveux">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Ongles"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Salive"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Selles"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Urines"/>
+        <rdfs:comment xml:lang="en">Hair sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Cheveux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Comorbidite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Comorbidite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Coexisting medical condition; kept distinct from medical history.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Comorbidité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ComplementAlimentaire -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ComplementAlimentaire">
+        <rdfs:comment xml:lang="en">Dietary supplement descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ComplémentAlimentaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ConditionMedicale -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ConditionMedicale">
+        <rdfs:comment xml:lang="en">Disease, syndrome, comorbidity, or medically relevant condition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ConditionMédicale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ConfirmationEchographique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ConfirmationEchographique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatDeConfirmation"/>
+        <rdfs:comment xml:lang="en">Ultrasound-based confirmation result.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ConfirmationÉchographique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ConsommationEau -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ConsommationEau">
+        <rdfs:comment xml:lang="en">Water consumption descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ConsommationEau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Coping -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Coping">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Coping style or mechanism.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Coping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Depression -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Depression">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Depression-related psychological factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Dépression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Dissociation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Dissociation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Dissociation-related psychological factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Dissociation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#DosagePolluants -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#DosagePolluants">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Biomarqueur"/>
+        <rdfs:comment xml:lang="en">Pollutant dosage biomarker/result type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">DosagePolluants</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Echographie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Echographie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#IRM"/>
+        <rdfs:comment xml:lang="en">Ultrasound examination.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Échographie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Echographiste -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Echographiste">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Medecin"/>
+        <rdfs:comment xml:lang="en">Ultrasound specialist; modeled as a kind of physician.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Échographiste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Etude -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Etude">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aSite"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#identifiantEtude"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Research study or protocol in which participants are followed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Étude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Evenement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Evenement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipantEvenement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#survientLorsDe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#dateEvenement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Relevant event occurring during study follow-up.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Événement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExamenImagerie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExamenImagerie">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipantExamen"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#examenRealiseLorsDe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Imaging examination performed during follow-up.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExamenImagerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Exposition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Exposition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipantExposition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any exposure relevant to the participant or disease process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Exposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionAir -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionAir">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExpositionEnvironnementale"/>
+        <rdfs:comment xml:lang="en">Exposure through air.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionAir</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionAlimentaire -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionAlimentaire">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aConsommationEau"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#ConsommationEau"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aFrequenceConsommation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#FrequenceConsommation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aHabitudeAlimentaire"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#HabitudeAlimentaire"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aModeCuisson"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#ModeCuisson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aNiveauTransformation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#NiveauTransformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aOrigineAliments"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#OrigineAliments"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aRegimeAlimentaire"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#RegimeAlimentaire"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Dietary exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionAlimentaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionChimique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionChimique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExpositionEnvironnementale"/>
+        <rdfs:comment xml:lang="en">Chemical environmental exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionChimique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionEau -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionEau">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExpositionEnvironnementale"/>
+        <rdfs:comment xml:lang="en">Exposure through water.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionEau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionEnvironnementale -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionEnvironnementale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Intermediate environmental exposure class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionEnvironnementale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionHormonale -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionHormonale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Hormonal exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionHormonale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionMedicamenteuse -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionMedicamenteuse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Medication-related exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionMédicamenteuse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionMicrobiote -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionMicrobiote">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Microbiota-related exposure/profile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionMicrobiote</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionPollution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionPollution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExpositionEnvironnementale"/>
+        <rdfs:comment xml:lang="en">Exposure to pollution such as fine particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionPollution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionProfessionnelle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionProfessionnelle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Occupational exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionProfessionnelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionSol -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionSol">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExpositionEnvironnementale"/>
+        <rdfs:comment xml:lang="en">Exposure through soil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionSol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionStress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionStress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Stress-related exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionStress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ExpositionTabagique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ExpositionTabagique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Exposition"/>
+        <rdfs:comment xml:lang="en">Smoking or tobacco-related exposure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ExpositionTabagique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurBiologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurBiologique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Biological risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurBiologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurClinique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Clinical risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurComportemental -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurComportemental">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Behavior-related risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurComportemental</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurDeRisque -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurDeRisque">
+        <rdfs:comment xml:lang="en">Any factor associated with increased disease risk.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurDeRisque</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurEnvironnemental -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurEnvironnemental">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">General environmental risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurEnvironnemental</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurFamilial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurFamilial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Family history or familial risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurFamilial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurGenetique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurGenetique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Genetic risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurGénétique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurPsychologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurPsychologique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurDeRisque"/>
+        <rdfs:comment xml:lang="en">Psychological risk factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurPsychologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FacteurRhumatoide -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FacteurRhumatoide">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#BiomarqueurImmunologique"/>
+        <rdfs:comment xml:lang="en">Rheumatoid factor biomarker type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FacteurRhumatoïde</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#FrequenceConsommation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#FrequenceConsommation">
+        <rdfs:comment xml:lang="en">Consumption frequency descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">FréquenceConsommation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Fruits -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Fruits">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Legumes"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Poisson"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProduitsLaitiers"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Fruits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Fruits</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#GroupeApparentePremierDegre -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#GroupeApparentePremierDegre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupeHautRisqueSansCSA"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupePRDebutante"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupeTresHautRisque"/>
+        <rdfs:comment xml:lang="en">Participants related at first degree.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">GroupeApparentéPremierDegré</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#GroupeDeParticipants -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#GroupeDeParticipants">
+        <rdfs:comment xml:lang="en">Cohort subgroup used to organize participants.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">GroupeDeParticipants</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#GroupeHautRisqueSansCSA -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#GroupeHautRisqueSansCSA">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupePRDebutante"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupeTresHautRisque"/>
+        <rdfs:comment xml:lang="en">High-risk participant group without CSA.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">GroupeHautRisqueSansCSA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#GroupePRDebutante -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#GroupePRDebutante">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#GroupeTresHautRisque"/>
+        <rdfs:comment xml:lang="en">Early rheumatoid arthritis participant group.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">GroupePRDébutante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#GroupeTresHautRisque -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#GroupeTresHautRisque">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+        <rdfs:comment xml:lang="en">Participant group with very high risk profile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">GroupeTrèsHautRisque</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#HabitudeAlimentaire -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#HabitudeAlimentaire">
+        <rdfs:comment xml:lang="en">Dietary habit pattern descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">HabitudeAlimentaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#IRM -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#IRM">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ExamenImagerie"/>
+        <rdfs:comment xml:lang="en">MRI examination.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">IRM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Infirmier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Infirmier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Investigateur"/>
+        <rdfs:comment xml:lang="en">Nurse involved in study care or follow-up.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Infirmier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Investigateur -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Investigateur">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Personne"/>
+        <rdfs:comment xml:lang="en">Study investigator involved in PROMESS activities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Investigateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Legumes -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Legumes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Poisson"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProduitsLaitiers"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Vegetables.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Légumes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Lieu -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Lieu">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#latitude"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#longitude"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#nomLieu"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Site, center, place, or physical location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Lieu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Medecin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Medecin">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Investigateur"/>
+        <rdfs:comment xml:lang="en">Physician involved in participant care or study tasks.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Médecin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Mesure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Mesure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipantMesure"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#estRealiseeLorsDe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aUnite"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aValeurNumerique"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aValeurTexte"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any measurement collected in the study.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Mesure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#MesureBiologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#MesureBiologique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aUniteBiomarqueur"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aValeurBiomarqueur"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Biological measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">MesureBiologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#MesureClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#MesureClinique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:comment xml:lang="en">Clinical measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">MesureClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#MesureExposomique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#MesureExposomique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:comment xml:lang="en">Exposomic measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">MesureExposomique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#MesureImagerie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#MesureImagerie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:comment xml:lang="en">Imaging-derived measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">MesureImagerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#MesurePsychologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#MesurePsychologique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Mesure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aScore"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Psychological measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">MesurePsychologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ModeCuisson -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ModeCuisson">
+        <rdfs:comment xml:lang="en">Cooking mode descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ModeCuisson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#NiveauTransformation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#NiveauTransformation">
+        <rdfs:comment xml:lang="en">Degree of food processing descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">NiveauTransformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#NonProgression -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#NonProgression">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatDEvolution"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProgressionVersArthrite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProgressionVersPR"/>
+        <rdfs:comment xml:lang="en">Outcome indicating no progression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">NonProgression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Ongles -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Ongles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Salive"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Selles"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Urines"/>
+        <rdfs:comment xml:lang="en">Nail sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Ongles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#OrigineAliments -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#OrigineAliments">
+        <rdfs:comment xml:lang="en">Origin/source of foods descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">OrigineAliments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ParametreAnthropometrique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ParametreAnthropometrique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurClinique"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#bmi"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#poids"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#taille"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Anthropometric parameter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ParamètreAnthropométrique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Participant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Participant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Personne"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#estSuiviDans"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#appartientAuGroupe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#GroupeDeParticipants"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#identifiantParticipant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Person enrolled or followed in the study.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ParticulesFines -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ParticulesFines">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Fine-particle exposure agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ParticulesFines</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Personne -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Personne">
+        <rdfs:comment xml:lang="en">Human actor in the PROMESS domain.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Personne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Poisson -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Poisson">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProduitsLaitiers"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Fish.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Poisson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#PolyarthriteRhumatoide -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#PolyarthriteRhumatoide">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+        <rdfs:comment xml:lang="en">Rheumatoid arthritis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">PolyarthriteRhumatoïde</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#PrelevementBiologique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#PrelevementBiologique">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#prelevementRealiseLorsDe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Visite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#provientDeParticipant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Biological sample collected from a participant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">PrélèvementBiologique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ProduitsLaitiers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ProduitsLaitiers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Snacks"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Dairy products.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ProduitsLaitiers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ProgressionVersArthrite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ProgressionVersArthrite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatDEvolution"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ProgressionVersPR"/>
+        <rdfs:comment xml:lang="en">Outcome indicating progression toward clinical arthritis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ProgressionVersArthrite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ProgressionVersPR -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ProgressionVersPR">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatDEvolution"/>
+        <rdfs:comment xml:lang="en">Outcome indicating progression toward rheumatoid arthritis.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ProgressionVersPR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Psychologue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Psychologue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Investigateur"/>
+        <rdfs:comment xml:lang="en">Psychologist involved in study or assessment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Psychologue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#QualiteDeVie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#QualiteDeVie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Quality of life factor retained under psychological factors.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">QualitéDeVie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#RegimeAlimentaire -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#RegimeAlimentaire">
+        <rdfs:comment xml:lang="en">Dietary regimen descriptor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">RégimeAlimentaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ResultatClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ResultatClinique">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipantResultat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#commentaireClinique"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#dateResultat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Clinical outcome or confirmation result.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">RésultatClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ResultatDEvolution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ResultatDEvolution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#progresseVersCondition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#ResultatDeConfirmation"/>
+        <rdfs:comment xml:lang="en">Clinical evolution outcome branch.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">RésultatDEvolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ResultatDeConfirmation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ResultatDeConfirmation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#ResultatClinique"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#confirmeCondition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#ConditionMedicale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Confirmation-result branch.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">RésultatDeConfirmation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Salive -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Salive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Selles"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Urines"/>
+        <rdfs:comment xml:lang="en">Saliva sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Salive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Sang -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Sang">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Selles"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Urines"/>
+        <rdfs:comment xml:lang="en">Blood sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Sang</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#ScoreClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#ScoreClinique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurClinique"/>
+        <rdfs:comment xml:lang="en">Clinical score or index.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">ScoreClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Selles -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Selles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Urines"/>
+        <rdfs:comment xml:lang="en">Stool sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Selles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Serum -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Serum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Sang"/>
+        <rdfs:comment xml:lang="en">Serum fraction derived from blood.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Sérum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#SigneClinique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#SigneClinique">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurClinique"/>
+        <rdfs:comment xml:lang="en">Clinically observed sign.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">SigneClinique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Silice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Silice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#AgentExposition"/>
+        <rdfs:comment xml:lang="en">Silica exposure agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Silice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Snacks -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Snacks">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Sucreries"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Snack foods.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Snacks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#SoutienSocial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#SoutienSocial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Social support factor retained under psychological factors.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">SoutienSocial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Stress -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Stress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurPsychologique"/>
+        <rdfs:comment xml:lang="en">Stress-related psychological factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#SubstanceTabagique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#SubstanceTabagique">
+        <rdfs:comment xml:lang="en">Controlled family for tobacco-related substances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">SubstanceTabagique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Sucreries -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Sucreries">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#Viande"/>
+        <rdfs:comment xml:lang="en">Sweets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Sucreries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Symptome -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Symptome">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#FacteurClinique"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#intensiteSymptome"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#presenceSymptome"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Participant-reported or observed symptom.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Symptôme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Tabac -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Tabac">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#SubstanceTabagique"/>
+        <rdfs:comment xml:lang="en">Tobacco substance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Tabac</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Temporalite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Temporalite">
+        <rdfs:comment xml:lang="en">Time-related structure for follow-up, symptoms, and biology.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Temporalité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#TemporaliteBiologie -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#TemporaliteBiologie">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Temporalite"/>
+        <rdfs:comment xml:lang="en">Biology temporality structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">TemporalitéBiologie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#TemporaliteSymptomes -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#TemporaliteSymptomes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Temporalite"/>
+        <rdfs:comment xml:lang="en">Symptom temporality structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">TemporalitéSymptômes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#TempsSuivi -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#TempsSuivi">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#Temporalite"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#ordreTempsSuivi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Follow-up time structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">TempsSuivi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Traitement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Traitement">
+        <rdfs:comment xml:lang="en">Therapeutic intervention or medication received by a participant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Traitement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#TypeAliment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#TypeAliment">
+        <rdfs:comment xml:lang="en">Food type descriptor class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">TypeAliment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#TypeDeVisite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#TypeDeVisite">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#codeTypeDeVisite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Controlled type used to classify visits such as J0 or S26.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">TypeDeVisite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Urines -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Urines">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#PrelevementBiologique"/>
+        <rdfs:comment xml:lang="en">Urine sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Urines</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Viande -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Viande">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeAliment"/>
+        <rdfs:comment xml:lang="en">Meat.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Viande</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#Visite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#Visite">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aTemporalite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#TempsSuivi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#aTypeDeVisite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#appartientAEtude"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Etude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#concerneParticipant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Participant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#seDerouleDans"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/promess/ontology#Lieu"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/promess/ontology#dateVisite"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Study encounter or protocol visit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">Visite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteAnticipee -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteAnticipee">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteInclusion"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteJ0"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS104"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS26"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS52"/>
+        <rdfs:comment xml:lang="en">Unscheduled or early visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteAnticipée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteInclusion -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteInclusion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteJ0"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS104"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS26"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS52"/>
+        <rdfs:comment xml:lang="en">Inclusion or baseline visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteInclusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteJ0 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteJ0">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS104"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS26"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS52"/>
+        <rdfs:comment xml:lang="en">Day 0 visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteJ0</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteS104 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteS104">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS26"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS52"/>
+        <rdfs:comment xml:lang="en">Week 104 visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteS104</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteS26 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteS26">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/promess/ontology#VisiteS52"/>
+        <rdfs:comment xml:lang="en">Week 26 visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteS26</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/promess/ontology#VisiteS52 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/promess/ontology#VisiteS52">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/promess/ontology#TypeDeVisite"/>
+        <rdfs:comment xml:lang="en">Week 52 visit type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/promess/ontology"/>
+        <rdfs:label xml:lang="fr">VisiteS52</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
