@@ -9,7 +9,7 @@
     },
     "iri" : "https://w3id.org/promess/ontology",
     "version" : "Draft v0.1",
-    "author" : [ "Sandra Bringay", "Zubeyir Salis", "Lylia Abrouk", "Nushrat Jahan" ],
+    "author" : [ "Nushrat Jahan", "Lylia Abrouk", "Sandra Bringay", "Zubeyir Salis" ],
     "description" : {
       "en" : "Draft version of the PROMESS ontology prepared for conceptual modeling, review, documentation, and further refinement.",
       "fr" : "Version préliminaire de l’ontologie PROMESS préparée pour la modélisation conceptuelle, la revue, la documentation et l’affinement ultérieur."
@@ -28,12 +28,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Lylia Abrouk",
+        "value" : "Nushrat Jahan",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Nushrat Jahan",
+        "value" : "Lylia Abrouk",
         "type" : "label"
       }, {
         "identifier" : "creator",
